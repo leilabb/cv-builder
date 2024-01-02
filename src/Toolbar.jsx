@@ -11,7 +11,7 @@ export default function Toolbar(props) {
         id={props.id}
         onClick={(event) => props.handleClick(event)}
         className="toolbar-icon"
-        src="./src/assets/bin.svg"
+        src="../assets/bin.svg"
       />
 
       {/* Up arrow icon */}
@@ -19,7 +19,7 @@ export default function Toolbar(props) {
         name="arrow-up"
         onClick={(event) => props.handleClick(event)}
         className="toolbar-icon"
-        src="./src/assets/arrow-up.svg"
+        src="../assets/arrow-up.svg"
       />
 
       {/* Down arrow icon */}
@@ -27,7 +27,7 @@ export default function Toolbar(props) {
         name="arrow-down"
         onClick={(event) => props.handleClick(event)}
         className="toolbar-icon"
-        src="./src/assets/arrow-down.svg"
+        src="../assets/arrow-down.svg"
       />
 
       {/* Plus icon */}
@@ -35,7 +35,7 @@ export default function Toolbar(props) {
         name="plus"
         onClick={(event) => props.handleClick(event)}
         className="toolbar-icon"
-        src="./src/assets/plus.svg"
+        src="../assets/plus.svg"
       />
     </div>
   );

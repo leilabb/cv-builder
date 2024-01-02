@@ -48,7 +48,7 @@ export default function App() {
         <h3 className="button" onClick={addExperience}>
           ADD A NEW EXPERIENCE
         </h3>
-        <img width="70px" height="70px" src="./src/assets/plus.svg" />
+        <img width="70px" height="70px" src="../assets/plus.svg" />
       </div>
     ); //om experienceData tom
 

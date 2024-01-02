@@ -13,7 +13,6 @@
   src: url(./Fonts/Nunito/NunitoSans.ttf);
 }
 
-/* phone */
 @media only screen and (max-width: 600px) {
   * {
     width: 100%;

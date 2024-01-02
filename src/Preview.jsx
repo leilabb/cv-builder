@@ -16,7 +16,7 @@ export default function Preview(props) {
     <div className="experiences">
       {/* time */}
       <div className="prvIcons">
-        <img className="" src="./src/assets/calendar.svg" />
+        <img className="" src="../assets/calendar.svg" />
       </div>
       <div className="timePeriodInfoPrv">
         <p className="fieldsPrv">{formattedDate(props.fromPeriod)} </p>
@@ -26,7 +26,7 @@ export default function Preview(props) {
       {/* company */}
 
       <div className="prvIcons">
-        <img src="./src/assets/position.svg" />
+        <img src="../assets/position.svg" />
       </div>
       <div className="companyInfoPrv">
         <p className="">
@@ -37,7 +37,7 @@ export default function Preview(props) {
       {/* tasks */}
       <div className="">
         <div className="prvIcons">
-          <img src="./src/assets/tasks.svg" />
+          <img src="../assets/tasks.svg" />
         </div>
         <p className="fieldsPrv textAreaPrv ">{props.tasks}</p>
       </div>

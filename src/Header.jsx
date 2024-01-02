@@ -10,14 +10,14 @@ export default function Header() {
       <div className="header-info">
         <div className="phone">
           <div className="phone-icon">
-            <img src="./src/assets/phone-icon.svg" />
+            <img src="../assets/phone-icon.svg" />
           </div>
           <h3 className="phone-number">0736439974</h3>
         </div>
         <div className="contact">
           <div className="mail">
             <a href="mailto:leila.benhalima2@gmail.com">
-              <img src="./src/assets/mail-icon.svg" />
+              <img src="../assets/mail-icon.svg" />
             </a>
           </div>
           <div className="linkedin">
@@ -25,14 +25,14 @@ export default function Header() {
               target="_blank"
               href="https://www.linkedin.com/in/leila-ben-halima"
             >
-              <img src="./src/assets/linkedin.svg" />
+              <img src="../assets/linkedin.svg" />
             </a>
           </div>
         </div>
       </div>
 
       <div className="timePeriodInfo">
-        <img className="header-img" src="./src/assets/leila-img.jpg" />
+        <img className="header-img" src="../assets/leila-img.jpg" />
       </div>
     </div>
   );
