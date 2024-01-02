@@ -148,7 +148,7 @@ export default function App() {
         {!togglePreview && <div>{allExperienceData}</div>}
       </div>
 
-      <p className="footer-text ">CV Builder coded by Leila ©</p>
+      <p className="footer-text ">CV Builder by Leila ©</p>
     </div>
   );
 }
