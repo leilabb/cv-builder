@@ -41,8 +41,11 @@ When pressing delete experience, modal saying "are you sure you want to continue
 #npm run build
 #firebase deploy
 
+push:
+git push origin Main
+git push --set-upstream origin deploy-visuals
+
 Next:
-github deploy
 dnd
 deploy:
     kolla att css/bilder paths är relativa

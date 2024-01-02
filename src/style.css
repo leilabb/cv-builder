@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: "YoungSerif-Regular";
-  src: url(./Fonts/YoungSerif/YoungSerif-Regular.ttf);
+  src: url(../Fonts/YoungSerif/YoungSerif-Regular.ttf);
 }
 
 @font-face {
   font-family: "Nunito";
-  src: url(./Fonts/Nunito/NunitoSans.ttf);
+  src: url(../Fonts/Nunito/NunitoSans.ttf);
 }
 
 @media only screen and (max-width: 600px) {
