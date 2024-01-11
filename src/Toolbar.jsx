@@ -16,6 +16,7 @@ export default function Toolbar(props) {
 
       {/* Up arrow icon */}
       <img
+        id={props.id}
         name="arrow-up"
         onClick={(event) => props.handleClick(event)}
         className="toolbar-icon"

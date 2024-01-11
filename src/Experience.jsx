@@ -2,7 +2,6 @@ import React from "react";
 import Toolbar from "./Toolbar";
 
 export default function Experience(props) {
-  //depending on what icon was clicked on the toolbar, something happens
   function handleAction(event) {
     {
       event.target.name === "plus" && props.addExperience();
@@ -11,7 +10,7 @@ export default function Experience(props) {
       event.target.name === "bin" && props.removeExperience(event);
     }
     {
-      event.target.name === "arrow-up" && console.log("Up arrow clicked!");
+      event.target.name === "arrow-up" && props.moveUpExperience(event);
     }
     {
       event.target.name === "arrow-down" && console.log("Down arrow clicked!");
@@ -22,6 +21,7 @@ export default function Experience(props) {
   //and also a toolbar at the bottom
   return (
     <div className="experiences">
+      {props.id}
       <form>
         <div className="timePeriodInfo">
           <div className="labels">

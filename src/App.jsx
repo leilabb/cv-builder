@@ -13,6 +13,8 @@ export default function App() {
     JSON.parse(localStorage.getItem("experiences")) || []
   );
 
+  console.log("experiencedata:", experienceData);
+
   const [togglePreview, setTogglePreview] = React.useState(
     localStorage.getItem("toggle") || false
   );
@@ -23,8 +25,9 @@ export default function App() {
 
     localStorage.setItem("toggle", togglePreview);
   }, [experienceData, togglePreview]);
+  console.log("experienceData", experienceData);
 
-  //mapping it out so each element in experienceData is rendered as its own component as opposed one big single experience component which would be weird. This map returns list of Experience components.
+  //sets experienceData. This map returns list of Experience components.
   const allExperienceData =
     Object.keys(experienceData).length > 0 && Array.isArray(experienceData) ? (
       // OM experienceData inte är tom
@@ -41,6 +44,7 @@ export default function App() {
           addExperience={addExperience} //prop to reach the addExperience function here in App from Experience
           removeExperience={removeExperience}
           onChange={onChange}
+          moveUpExperience={moveUpExperience}
         />
       ))
     ) : (
@@ -91,7 +95,28 @@ export default function App() {
         : experience; // else return experience
     });
     setExperienceData(updatedExperienceData);
-    console.log("Updated Experience Data:", updatedExperienceData);
+  }
+
+  function moveUpExperience(event) {
+    const { id } = event.target;
+    if (Object.keys(experienceData).length > 1) {
+      const updatedExperienceData = experienceData.map((experience) => {
+        return experience.id === event.target.id
+          ? {
+              //const positionOfClickedExperience=  experienceData.indexOf(experience);
+              // const currentExperience = experienceData[positionOfClickedExperience].data
+              // const previousExperience = experienceData[positionOfClickedExperience - 1].data säkerställ att det alltid finns en innan
+              // ...experience,
+              //   data: {
+              //     ...experience.data,
+              // newCurrentExperience = previousExperience
+              //   },
+              // newCurrentExperience = previousExperience
+              // previousExperience = currentExperience
+            }
+          : experience; //om id:na inte matchar
+      });
+    }
   }
 
   function addExperience() {

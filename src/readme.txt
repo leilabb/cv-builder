@@ -45,9 +45,9 @@ push:
 git push origin Main
 git push --set-upstream origin deploy-visuals
 
-Next:
+
 dnd
-deploy:
-    kolla att css/bilder paths är relativa
-    image paths : sätt alla till dist?
-    viewport - allt är inzoomat?
+export
+design
+responsiv
+refactor - props.id i Experience - lägga in den en gång bara högst upp
