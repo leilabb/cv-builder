@@ -46,6 +46,8 @@ git push origin Main
 git push --set-upstream origin deploy-visuals
 
 sätta upp git på en annan dator
+More info in the header - ex: github profile, birth date
+
 
 dnd
 export
