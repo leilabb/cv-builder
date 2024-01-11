@@ -8,12 +8,9 @@ import "./style.css";
 
 export default function App() {
   //initialize state from whatever is stored in localstorage. if there is nothing in localstorage: return object with empty data but a new id.
-  //experienceData is an array
   const [experienceData, setExperienceData] = React.useState(
     JSON.parse(localStorage.getItem("experiences")) || []
   );
-
-  console.log("experiencedata:", experienceData);
 
   const [togglePreview, setTogglePreview] = React.useState(
     localStorage.getItem("toggle") || false
@@ -25,7 +22,6 @@ export default function App() {
 
     localStorage.setItem("toggle", togglePreview);
   }, [experienceData, togglePreview]);
-  console.log("experienceData", experienceData);
 
   //sets experienceData. This map returns list of Experience components.
   const allExperienceData =
@@ -45,6 +41,7 @@ export default function App() {
           removeExperience={removeExperience}
           onChange={onChange}
           moveUpExperience={moveUpExperience}
+          moveDownExperience={moveDownExperience}
         />
       ))
     ) : (
@@ -98,24 +95,44 @@ export default function App() {
   }
 
   function moveUpExperience(event) {
-    const { id } = event.target;
-    if (Object.keys(experienceData).length > 1) {
-      const updatedExperienceData = experienceData.map((experience) => {
-        return experience.id === event.target.id
-          ? {
-              //const positionOfClickedExperience=  experienceData.indexOf(experience);
-              // const currentExperience = experienceData[positionOfClickedExperience].data
-              // const previousExperience = experienceData[positionOfClickedExperience - 1].data säkerställ att det alltid finns en innan
-              // ...experience,
-              //   data: {
-              //     ...experience.data,
-              // newCurrentExperience = previousExperience
-              //   },
-              // newCurrentExperience = previousExperience
-              // previousExperience = currentExperience
-            }
-          : experience; //om id:na inte matchar
-      });
+    const clickedId = event.target.id;
+    const indexClickedId = Object.values(experienceData).findIndex(
+      (experience) => experience.id === clickedId
+    );
+    //if one experience do nothing
+
+    if (indexClickedId < 1) {
+      return experienceData;
+    } else {
+      const previousExperience = experienceData[indexClickedId - 1];
+      const currentExperience = experienceData[indexClickedId];
+      const updatedExperienceData = [...experienceData];
+      //switch experiences
+      updatedExperienceData[indexClickedId] = previousExperience;
+      updatedExperienceData[indexClickedId - 1] = currentExperience;
+      setExperienceData(updatedExperienceData);
+    }
+  }
+
+  function moveDownExperience(event) {
+    const clickedId = event.target.id;
+    const indexClickedId = Object.values(experienceData).findIndex(
+      (experience) => experience.id === clickedId
+    );
+    const numberOfExperiences = Object.keys(experienceData).length;
+    //if last element in list
+    if (indexClickedId === numberOfExperiences - 1) {
+      return experienceData;
+    }
+    //if one experience do nothing
+    else {
+      const nextExperience = experienceData[indexClickedId + 1];
+      const currentExperience = experienceData[indexClickedId];
+      const updatedExperienceData = [...experienceData];
+      //switch experiences
+      updatedExperienceData[indexClickedId] = nextExperience;
+      updatedExperienceData[indexClickedId + 1] = currentExperience;
+      setExperienceData(updatedExperienceData);
     }
   }
 

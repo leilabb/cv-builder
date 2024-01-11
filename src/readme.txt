@@ -45,6 +45,7 @@ push:
 git push origin Main
 git push --set-upstream origin deploy-visuals
 
+sätta upp git på en annan dator
 
 dnd
 export

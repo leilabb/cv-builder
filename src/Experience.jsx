@@ -13,7 +13,7 @@ export default function Experience(props) {
       event.target.name === "arrow-up" && props.moveUpExperience(event);
     }
     {
-      event.target.name === "arrow-down" && console.log("Down arrow clicked!");
+      event.target.name === "arrow-down" && props.moveDownExperience(event);
     }
   }
 
@@ -21,14 +21,12 @@ export default function Experience(props) {
   //and also a toolbar at the bottom
   return (
     <div className="experiences">
-      {props.id}
-      <form>
+      <form id={props.id}>
         <div className="timePeriodInfo">
           <div className="labels">
             <label htmlFor="fromPeriod">From</label>
 
             <input
-              id={props.id} //sending the id of each component
               className="input"
               type="month"
               placeholder="From"
@@ -42,7 +40,6 @@ export default function Experience(props) {
             <label htmlFor="toPeriod">To</label>
 
             <input
-              id={props.id}
               className="input"
               type="month"
               placeholder="To"
@@ -57,7 +54,6 @@ export default function Experience(props) {
           <div className="labels">
             <label htmlFor="companyInfo">Company Name</label>
             <input
-              id={props.id}
               className="input"
               type="text"
               placeholder="Company Name"
@@ -70,7 +66,6 @@ export default function Experience(props) {
           <div className="labels">
             <label htmlFor="city">City</label>
             <input
-              id={props.id}
               className="input"
               type="text"
               placeholder="City"
@@ -84,7 +79,6 @@ export default function Experience(props) {
         <div className="labels">
           <label htmlFor="tasks">Tasks</label>
           <textarea
-            id={props.id}
             className="input textarea"
             placeholder="Tasks, title etc."
             onChange={(event) => props.onChange(event)}
