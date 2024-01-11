@@ -21,12 +21,13 @@ export default function Experience(props) {
   //and also a toolbar at the bottom
   return (
     <div className="experiences">
-      <form id={props.id}>
+      <form>
         <div className="timePeriodInfo">
           <div className="labels">
             <label htmlFor="fromPeriod">From</label>
 
             <input
+              id={props.id}
               className="input"
               type="month"
               placeholder="From"
@@ -40,6 +41,7 @@ export default function Experience(props) {
             <label htmlFor="toPeriod">To</label>
 
             <input
+              id={props.id}
               className="input"
               type="month"
               placeholder="To"
@@ -54,6 +56,7 @@ export default function Experience(props) {
           <div className="labels">
             <label htmlFor="companyInfo">Company Name</label>
             <input
+              id={props.id}
               className="input"
               type="text"
               placeholder="Company Name"
@@ -66,6 +69,7 @@ export default function Experience(props) {
           <div className="labels">
             <label htmlFor="city">City</label>
             <input
+              id={props.id}
               className="input"
               type="text"
               placeholder="City"
@@ -79,6 +83,7 @@ export default function Experience(props) {
         <div className="labels">
           <label htmlFor="tasks">Tasks</label>
           <textarea
+            id={props.id}
             className="input textarea"
             placeholder="Tasks, title etc."
             onChange={(event) => props.onChange(event)}
