@@ -1,0 +1,324 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+@font-face {
+  font-family: "YoungSerif-Regular";
+  src: url(../Fonts/YoungSerif/YoungSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url(../Fonts/Nunito/NunitoSans.ttf);
+}
+
+@media only screen and (max-width: 600px) {
+  * {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+  .preview-button {
+    margin-bottom: 2px;
+  }
+
+  img {
+    height: 20px;
+    width: 20px;
+  }
+
+  h1 {
+    text-align: left;
+  }
+  h2 {
+    text-align: left;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  background-color: rgb(253, 252, 251);
+
+  /* centers the content  */
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  min-width: 500px;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 40px;
+  margin: 0;
+  font-family: "YoungSerif-Regular", sans-serif;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 34px;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "YoungSerif-Regular", sans-serif;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+a {
+  color: black;
+}
+
+.export-button {
+  border: solid 1px #dd403a;
+  border-radius: 10px;
+  background-color: #dd403a;
+  color: white;
+  padding: 10px;
+
+  z-index: 5;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+.export-button:hover {
+  background-color: rgb(225, 3, 3);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header {
+  background: #b29a9194;
+
+  border: solid 1px rgb(253, 252, 251);
+  border-radius: 20px;
+
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+
+.header-img {
+  width: 125px;
+  height: 120px;
+  border-radius: 50%;
+
+  position: absolute;
+  right: 0;
+  top: 75px;
+  margin-right: 10px;
+  border: solid 3px #ffa50070;
+}
+
+/* .header-info {
+  width: fit-content;
+  padding: 4px;
+  border-radius: 20px;
+} */
+
+.titles {
+  margin-top: 20px;
+}
+
+.phone-icon {
+  margin-right: 8px;
+  margin-top: 6px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.phone-number {
+  font-weight: bold;
+  background: beige;
+  border-radius: 20px;
+  padding: 4px;
+}
+
+.linkedin {
+  margin-left: 10px;
+}
+
+.experiences {
+  background-color: #f6f3f0;
+  margin-top: 20px;
+  border: solid 3px #ddcbbb;
+  border-radius: 20px;
+  padding: 30px;
+  position: inherit;
+}
+
+.input {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid #ffa50070;
+}
+
+input:focus {
+  outline: 1px solid rgb(247, 183, 63);
+  background-color: rgb(247, 183, 63);
+}
+
+.textarea {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.toolbar {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: rgba(226, 209, 195, 1);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.toolbar-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.timePeriodInfo,
+.companyInfo {
+  display: flex;
+}
+
+.labels {
+  display: block;
+}
+
+.preview-button {
+  border: solid 1px rgb(203, 163, 130);
+  border-radius: 10px;
+  background-color: rgba(203, 163, 130);
+  color: white;
+
+  padding: 10px;
+
+  z-index: 5;
+
+  font-size: 14px;
+}
+
+.preview-button:hover {
+  background-color: rgb(171, 42, 42);
+}
+
+.fieldsPrv {
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+/* this class has evrything from fieldsPrv + what is defined here*/
+.fieldsPrv.textAreaPrv {
+  padding: 10px;
+  background-color: #e9dccb;
+  white-space: pre-line; /* for new lines in textarea to be rendered at preview */
+
+  display: flex;
+  border-radius: 10px;
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.prvIcons {
+  display: block;
+}
+
+.companyInfoPrv {
+  /* font-weight: bold;
+  box-shadow: 1px 1px 1px 1px #626267;
+  width: fit-content;
+  border: 1px solid rgb(203, 163, 130);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  background-color: #e3dbd4;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0px 5px 0px 5px; */
+
+  background-color: #e9dccb;
+
+  display: flex;
+  border-radius: 10px;
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0px 5px 0px 5px;
+}
+
+.timePeriodInfoPrv {
+  background-color: #e9dccb;
+
+  display: flex;
+  border-radius: 10px;
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0px 5px 0px 5px;
+}
+
+.footer-text {
+  text-align: center;
+  font-style: italic;
+}

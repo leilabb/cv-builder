@@ -49,8 +49,11 @@ sätta upp git på en annan dator
 More info in the header - ex: github profile, birth date
 
 
-dnd
-export
+TODO:
+Make tailwind work
+Add tailwind templates
+
+export/download as jpg
 design
 responsiv
 refactor - props.id i Experience - lägga in den en gång bara högst upp
