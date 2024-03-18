@@ -48,12 +48,14 @@ git push --set-upstream origin deploy-visuals
 sätta upp git på en annan dator
 More info in the header - ex: github profile, birth date
 
-
 TODO:
-Make tailwind work
 Add tailwind templates
+Download as jpg (skriv ut ev länkar)
 
-export/download as jpg
+
 design
 responsiv
 refactor - props.id i Experience - lägga in den en gång bara högst upp
+
+Extra:
+Make it possible for different people to use it

@@ -3,6 +3,7 @@ import Header from "./Header";
 import Experience from "./Experience";
 import Preview from "./Preview";
 import { nanoid } from "nanoid";
+import html2canvas from "html2canvas";
 
 import "./style.css";
 
@@ -168,6 +169,28 @@ export default function App() {
     setTogglePreview((prevToggleState) => !prevToggleState);
   }
 
+  /* function CVExportButton() {
+  handleExportClick = () => {
+    html2canvas(document.getElementById('cv-container')).then(function(canvas) {
+      var img = canvas.toDataURL('image/png');
+      var link = document.createElement('a');
+      link.href = img;
+      link.download = 'cv.png';
+      link.click();
+    });
+  }
+
+  render() {
+    return (
+      <button onClick={handleExportClick}>Export as Image</button>
+    );
+  }
+} */
+
+  html2canvas(document.querySelector("#capture")).then((canvas) => {
+    document.body.appendChild(canvas);
+  });
+
   return (
     <div className="container">
       {/* Toggle Preview or edit mode */}
@@ -177,7 +200,11 @@ export default function App() {
           {" "}
           {togglePreview ? "Edit" : "Preview"}{" "}
         </button>
-        <button className="export-button">Export to PDF</button>
+        {
+          <button id="capture" className="export-button">
+            Export to JPEG
+          </button>
+        }
       </div>
 
       <Header />
