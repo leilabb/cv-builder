@@ -124,9 +124,7 @@ export default function App() {
     //if last element in list
     if (indexClickedId === numberOfExperiences - 1) {
       return experienceData;
-    }
-    //if one experience do nothing
-    else {
+    } else {
       const nextExperience = experienceData[indexClickedId + 1];
       const currentExperience = experienceData[indexClickedId];
       const updatedExperienceData = [...experienceData];
@@ -169,54 +167,23 @@ export default function App() {
     setTogglePreview((prevToggleState) => !prevToggleState);
   }
 
-  /* function CVExportButton() {
-  handleExportClick = () => {
-    html2canvas(document.getElementById('cv-container')).then(function(canvas) {
-      var img = canvas.toDataURL('image/png');
-      var link = document.createElement('a');
-      link.href = img;
-      link.download = 'cv.png';
-      link.click();
-    });
-  }
-
-  render() {
-    return (
-      <button onClick={handleExportClick}>Export as Image</button>
-    );
-  }
-} */
-
-  html2canvas(document.querySelector("#capture")).then((canvas) => {
-    document.body.appendChild(canvas);
-  });
-
   return (
     <div className="container">
       {/* Toggle Preview or edit mode */}
-
       <div className="button-container">
         <button className="preview-button" onClick={toggle}>
           {" "}
           {togglePreview ? "Edit" : "Preview"}{" "}
         </button>
-        {
-          <button id="capture" className="export-button">
-            Export to JPEG
-          </button>
-        }
+        {<button className="export-button">Export to JPEG</button>}
       </div>
-
       <Header />
-
       <div className="container">
         {/*preview mode rendered */}
         {togglePreview && <div>{previewExperiencesData}</div>}
-
         {/*edit mode rendered */}
         {!togglePreview && <div>{allExperienceData}</div>}
       </div>
-
       <p className="footer-text ">CV Builder by Leila ©</p>
     </div>
   );
