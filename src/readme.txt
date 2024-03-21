@@ -49,11 +49,16 @@ sätta upp git på en annan dator
 More info in the header - ex: github profile, birth date
 
 TODO:
-Add tailwind templates
-Download as jpg (skriv ut ev länkar)
+Lägg till utbildning under mitt namn
+deploy:a senaste ändringarna
+arbitrary values
+
+SKIP THIS? And just make it into a tech CV and send the link instead. Download as jpg (skriv ut ev länkar)
+Have another button and route to "Leilas CV" and then a button for "Back to app"? Leilas CV should be default data.
+
+Lägg till spalt/kolumn med technologies (cirklar typ med språk/verktyg) och länkar/kontakt där linkedin och github är? 
 
 
-design
 responsiv
 refactor - props.id i Experience - lägga in den en gång bara högst upp
 

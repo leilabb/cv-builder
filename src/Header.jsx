@@ -19,7 +19,8 @@ export default function Example() {
                 Leila Ben Halima
               </h3>
               <p className="text-sm text-gray-500">
-                <a href="#">@leilabb</a>
+                Github: leilabb <br></br>LinkedIn:
+                linkedin.com/in/leila-ben-halima/
               </p>
             </div>
           </div>
@@ -33,7 +34,7 @@ export default function Example() {
               className="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400"
               aria-hidden="true"
             />
-            <span>Phone</span>
+            <span>0736439974</span>
           </button>
           <button
             type="button"
@@ -43,49 +44,14 @@ export default function Example() {
               className="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400"
               aria-hidden="true"
             />
-            <span>Email</span>
+            <span>
+              <a href="mailto:leila.benhalima2@gmail.com">
+                leila.benhalima2@gmail.com
+              </a>
+            </span>
           </button>
         </div>
       </div>
     </div>
   );
 }
-
-/* 
-export default function Header() {
-  return (
-    <div className="header">
-      <div className="titles">
-        <h1>Leila Ben Halima</h1>
-        <h2>CV</h2>
-      </div>
-      <div className="header-info">
-        <div className="phone">
-          <div className="phone-icon">
-            <img src="../assets/phone-icon.svg" />
-          </div>
-          <h3 className="phone-number">0736439974</h3>
-        </div>
-        <div className="contact">
-          <div className="mail">
-            <a href="mailto:leila.benhalima2@gmail.com">
-              <img src="../assets/mail-icon.svg" />
-            </a>
-          </div>
-          <div className="linkedin">
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/leila-ben-halima"
-            >
-              <img src="../assets/linkedin.svg" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="timePeriodInfo">
-        <img className="header-img" src="../assets/leila-img.jpg" />
-      </div>
-    </div>
-  );
-} */
