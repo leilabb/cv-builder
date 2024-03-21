@@ -49,7 +49,6 @@ sätta upp git på en annan dator
 More info in the header - ex: github profile, birth date
 
 TODO:
-Lägg till utbildning under mitt namn
 arbitrary values
 
 SKIP THIS? And just make it into a tech CV and send the link instead. Download as jpg (skriv ut ev länkar)
