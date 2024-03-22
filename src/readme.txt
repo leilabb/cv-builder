@@ -49,8 +49,7 @@ sätta upp git på en annan dator
 More info in the header - ex: github profile, birth date
 
 TODO:
-Have another button and route to "My CV" and then a button for "Back to app"? 
-
+Back home button: as long as it's not active - show
 Leilas CV should be default data.
 Mobile responsiveness
 Edit-knappen (bara på mindre skärmar, funkar på stor skärm)
