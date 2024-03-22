@@ -9,7 +9,7 @@ import linkedinLogo from "./assets/linkedin.png";
 
 export default function Example() {
   return (
-    <div className="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
+    <div className="fixed-width border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
       <div className="-ml-4 -mt-4 flex flex-wrap items-center justify-between sm:flex-nowrap">
         <div className="ml-4 mt-4">
           <div className="flex items-center">
@@ -67,12 +67,12 @@ export default function Example() {
             {" "}
             <button
               type="button"
-              className="relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+              className="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
             >
               <img src={githubLogo} className="-ml-0.5 mr-1.5 h-5 w-5" />
               <span>
                 <a href="https://github.com/leilabb" target="_blank">
-                  leiilab{" "}
+                  leilabb{" "}
                 </a>
               </span>
             </button>

@@ -611,7 +611,14 @@ body {
   justify-content: center;
 }
 
-.container {
+
+.fixed-width {
+  width: 800px; /* Set the width to your desired value */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.myContainer {
   min-width: 500px;
 }
 
@@ -655,12 +662,7 @@ a {
   background-color: rgb(225, 3, 3);
 }
 
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
+
 
 .header {
   background: #b29a9194;
@@ -683,6 +685,9 @@ a {
   border: solid 3px #ffa50070;
 }
 
+.active {
+color:#f59e0b;
+}
 /* .header-info {
   width: fit-content;
   padding: 4px;
@@ -725,7 +730,7 @@ a {
   margin-top: 20px;
   /*border: solid 3px #ddcbbb;*/
   border-radius: 20px;
-  padding: 30px;
+  padding: 0px;
   position: inherit;
 }
 
@@ -739,8 +744,11 @@ a {
 }
 
 input:focus {
-  outline: 1px solid rgb(247, 183, 63);
-  background-color: rgb(247, 183, 63);
+  /*#f59e0b*/
+  /*outline: 1px solid rgb(247, 183, 63);*/
+  outline: 1px solid #f59e0b;
+  /*background-color: rgb(247, 183, 63);*/
+  background-color: #f59e0b;
 }
 
 .textarea {

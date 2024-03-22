@@ -1,3 +1,11 @@
+export default function CV() {
+  return <h1>This my CV</h1>;
+}
+
+/*
+Should basically be a hardcoded Preview.
+
+
 import React from "react";
 import formattedDate from "./utils/date";
 
@@ -35,3 +43,4 @@ export default function Preview(props) {
     </div>
   );
 }
+*/
