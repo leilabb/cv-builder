@@ -14,7 +14,7 @@ export default function Preview(props) {
             </time>
             <a
               href=""
-              className="relative z-10 rounded-full bg-yellow-400 px-3 py-1.5 font-medium text-gray-600"
+              className="relative z-10 rounded-full bg-primary px-3 py-1.5 font-medium text-gray-600"
             >
               {props.city}
             </a>

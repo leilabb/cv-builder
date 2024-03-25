@@ -4,6 +4,7 @@ import Experience from "../Experience";
 import Preview from "../Preview";
 import { nanoid } from "nanoid";
 import "../style.css";
+import { NavLink } from "react-router-dom";
 
 export default function CvBuilder() {
   //initialize state from whatever is stored in localstorage. if there is nothing in localstorage: return object with empty data but a new id.
@@ -138,7 +139,7 @@ export default function CvBuilder() {
     newExperienceData.push(
       //lägg in ett nytt, tomt objekt sist i listan, med nytt id
       {
-        id: nanoid(), //new id
+        id: nanoid(),
         data: {
           fromPeriod: "",
           toPeriod: "",
@@ -166,15 +167,23 @@ export default function CvBuilder() {
   }
 
   return (
-    <div className="myContainer">
+    <div className="w-screen">
       <button
-        className="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+        className="w-full md:w-20 relative  items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
         onClick={toggle}
       >
         {togglePreview ? "Edit" : "Preview"}
       </button>
+      <NavLink
+        className={({ isActive }) => (isActive ? "hidden" : "md:ml-2")}
+        to="/"
+      >
+        <button className="relative w-full h-full md:w-20  items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+          Home
+        </button>
+      </NavLink>
       <Header />
-      <div className="myContainer">
+      <div className="">
         {togglePreview && <div>{previewExperiencesData}</div>}
         {!togglePreview && <div>{allExperienceData}</div>}
       </div>

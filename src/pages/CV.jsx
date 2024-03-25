@@ -1,5 +1,22 @@
+import { NavLink } from "react-router-dom";
 export default function CV() {
-  return <h1>This my CV</h1>;
+  return (
+    <div className="container ">
+      <div className="">
+        <NavLink
+          className={({ isActive }) => (isActive ? "hidden" : "ml-2")}
+          to="/"
+        >
+          <button className="relative w-16 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+            Home
+          </button>
+        </NavLink>
+        <div className="">
+          <h1>This my CV</h1>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 /*

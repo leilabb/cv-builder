@@ -45,20 +45,19 @@ push:
 git push origin Main
 git push --set-upstream origin deploy-visuals
 
-sätta upp git på en annan dator
-More info in the header - ex: github profile, birth date
-
 TODO:
-Back home button: as long as it's not active - show
+Make look good on bigger screens
+Make Tailwind work properly: arbitrary values, custom styles and colors
+
+
+
 Leilas CV should be default data.
-Mobile responsiveness
 Edit-knappen (bara på mindre skärmar, funkar på stor skärm)
-custom styles
 
 Lägg till spalt/kolumn med technologies (cirklar typ med språk/verktyg)
 
-clean code: remove unused css classes from styles.css
-
+clean code: 
+remove unused css classes from styles.css
 refactor - props.id i Experience - lägga in den en gång bara högst upp
 
 Extra:

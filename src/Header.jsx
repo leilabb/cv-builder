@@ -7,27 +7,27 @@ import {
 import githubLogo from "./assets/github-mark.png";
 import linkedinLogo from "./assets/linkedin.png";
 
-export default function Example() {
+export default function Header() {
   return (
-    <div className="fixed-width border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
+    <div className="border-b border-gray-200 bg-white py-5 sm:px-6">
       <div className="-ml-4 -mt-4 flex flex-wrap items-center justify-between sm:flex-nowrap">
         <div className="ml-4 mt-4">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <img
-                className="h-14 w-14 rounded-full"
-                src="../assets/leila-img.jpg"
-                alt=""
-              />
-            </div>
+            <img
+              className="h-24 w-24 md:h-16 md:w-16 rounded-full"
+              src="../assets/leila-img.jpg"
+              alt=""
+            />
             <div className="ml-4">
-              <h3 className="text-base font-semibold leading-6 text-gray-900">
-                Leila Ben Halima
-              </h3>
+              <div className="">
+                <h3 className="text-base font-semibold leading-6 text-gray-900">
+                  Leila Ben Halima
+                </h3>
+              </div>
               <p className=" text-sm text-gray-500">
                 <p className="flex">
-                  <AcademicCapIcon className="mr-2 h-5 w-5" /> Bachelor's degree
-                  in Computer Science
+                  <AcademicCapIcon className="mr-2 h-6 w-6 md:h-5 md:w-5" />{" "}
+                  Bachelor's degree in Computer Science
                 </p>
                 <p className="ml-7">Uppsala University, 2014</p>
               </p>
@@ -57,14 +57,15 @@ export default function Example() {
               />
               <span>
                 <a href="mailto:leila.benhalima2@gmail.com">
-                  leila.benhalima2@gmail.com
+                  <span className="md:hidden">Email me</span>
+                  <span className="md:inline-flex hidden">
+                    leila.benhalima2@gmail.com
+                  </span>
                 </a>
               </span>
             </button>
           </div>
-
-          <div className="flex ">
-            {" "}
+          <div className="flex md:w-full">
             <button
               type="button"
               className="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
