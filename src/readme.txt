@@ -46,10 +46,12 @@ git push origin Main
 git push --set-upstream origin deploy-visuals
 
 TODO:
-Make look good on bigger screens
-Make Tailwind work properly: arbitrary values, custom styles and colors
+Flytta edit-knappen till där man faktiskt editar
 
-
+Design när experience/preview är tom
+CV-sidan
+Clean code
+Colors
 
 Leilas CV should be default data.
 Edit-knappen (bara på mindre skärmar, funkar på stor skärm)

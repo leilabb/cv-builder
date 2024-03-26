@@ -9,7 +9,7 @@ import linkedinLogo from "./assets/linkedin.png";
 
 export default function Header() {
   return (
-    <div className="border-b border-gray-200 bg-white py-5 sm:px-6">
+    <div className="md:mx-40 border-b border-gray-200 bg-white py-5 sm:px-6">
       <div className="-ml-4 -mt-4 flex flex-wrap items-center justify-between sm:flex-nowrap">
         <div className="ml-4 mt-4">
           <div className="flex items-center">
@@ -34,7 +34,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-        <div className="ml-4 mt-4 flex flex-col">
+        <div className="ml-4 mt-4 flex flex-col md:flex-row">
           <div className="flex mb-2 ">
             {" "}
             <button
@@ -49,7 +49,7 @@ export default function Header() {
             </button>
             <button
               type="button"
-              className="relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+              className="relative md:mr-2 ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
             >
               <EnvelopeIcon
                 className="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400"
@@ -65,10 +65,11 @@ export default function Header() {
               </span>
             </button>
           </div>
-          <div className="flex md:w-full">
+          <div className="flex mb-2 ">
+            {" "}
             <button
               type="button"
-              className="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+              className="md:py-0 relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
             >
               <img src={githubLogo} className="-ml-0.5 mr-1.5 h-5 w-5" />
               <span>
@@ -79,11 +80,14 @@ export default function Header() {
             </button>
             <button
               type="button"
-              className="relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+              className="md:py-0 relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
             >
               <img src={linkedinLogo} className=" -ml-0.5 mr-1.5 h-5 w-5" />
               <span>
-                <a href="linkedin.com/in/leila-ben-halima/" target="_blank">
+                <a
+                  href="https://linkedin.com/in/leila-ben-halima/"
+                  target="_blank"
+                >
                   LinkedIn
                 </a>
               </span>
@@ -94,4 +98,3 @@ export default function Header() {
     </div>
   );
 }
-//          Github: leilabb <br></br>LinkedIn: linkedin.com/in/leila-ben-halima/
