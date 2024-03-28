@@ -25,7 +25,6 @@ export default function Experience(props) {
         <div className="timePeriodInfo">
           <div className="labels">
             <label htmlFor="fromPeriod">From</label>
-
             <input
               id={props.id}
               className="input"
@@ -39,7 +38,6 @@ export default function Experience(props) {
 
           <div className="labels">
             <label htmlFor="toPeriod">To</label>
-
             <input
               id={props.id}
               className="input"
