@@ -9,7 +9,7 @@ import linkedinLogo from "./assets/linkedin.png";
 
 export default function Header() {
   return (
-    <div className="md:mx-40 border-b border-gray-200 bg-white py-5 sm:px-6">
+    <div className="md:mx-40 md:border-b bg-white py-5 sm:px-6">
       <div className="-ml-4 -mt-4 flex flex-wrap items-center justify-between sm:flex-nowrap">
         <div className="ml-4 mt-4">
           <div className="flex items-center">
@@ -26,7 +26,7 @@ export default function Header() {
               </div>
               <p className=" text-sm text-gray-500">
                 <p className="flex">
-                  <AcademicCapIcon className="mr-2 h-6 w-6 md:h-5 md:w-5" />{" "}
+                  <AcademicCapIcon className="mr-2 h-6 w-6 md:h-5 md:w-5 text-gray-500" />{" "}
                   Bachelor's degree in Computer Science
                 </p>
                 <p className="ml-7">Uppsala University, 2014</p>
@@ -42,7 +42,7 @@ export default function Header() {
               className="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
             >
               <PhoneIcon
-                className="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400"
+                className="-ml-0.5 mr-1.5 h-5 w-5 text-gray-500"
                 aria-hidden="true"
               />
               <span>0736439974</span>
@@ -52,7 +52,7 @@ export default function Header() {
               className="relative md:mr-2 ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
             >
               <EnvelopeIcon
-                className="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400"
+                className="-ml-0.5 mr-1.5 h-5 w-5 text-gray-500"
                 aria-hidden="true"
               />
               <span>
