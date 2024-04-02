@@ -35,7 +35,8 @@ sticky export button
 Section title(ex "utbildning", "praktik")
 Themes
 When pressing delete experience, modal saying "are you sure you want to continue?"
-
+Make it possible for different people to use it
+Add a backend
 
 *Commands to deploy*
 #npm run build
@@ -57,16 +58,9 @@ messy return in cv Builder. return component Preview with prop toggle.
 <Experiences {allExperienceData}/>
 
 Clean code
-Colors
-
-Leilas CV should be default data.
-Edit-knappen (bara på mindre skärmar, funkar på stor skärm)
-
-Lägg till spalt/kolumn med technologies (cirklar typ med språk/verktyg)
+Add colors
 
 clean code: 
 remove unused css classes from styles.css
 refactor - props.id i Experience - lägga in den en gång bara högst upp
 
-Extra:
-Make it possible for different people to use it

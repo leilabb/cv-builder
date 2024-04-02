@@ -1014,6 +1014,11 @@ video {
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
 }
 
+.bg-green-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+}
+
 .p-12 {
   padding: 3rem;
 }
@@ -1208,6 +1213,11 @@ video {
 
 .ring-yellow-600\/20 {
   --tw-ring-color: rgb(202 138 4 / 0.2);
+}
+
+.ring-green-300 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(134 239 172 / var(--tw-ring-opacity));
 }
 
 .filter {
@@ -2102,6 +2112,11 @@ input:focus {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-green-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+
 .group:hover .group-hover\:text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
@@ -2132,6 +2147,21 @@ input:focus {
   .md\:mx-\[170px\] {
     margin-left: 170px;
     margin-right: 170px;
+  }
+
+  .md\:mx-\[40px\] {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .md\:mx-\[180px\] {
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+
+  .md\:mx-\[190px\] {
+    margin-left: 190px;
+    margin-right: 190px;
   }
 
   .md\:mb-0 {

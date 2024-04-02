@@ -183,7 +183,7 @@ export default function CvBuilder() {
       <Header />
       <div className="md:mx-48">
         <button
-          className="md:mt-4 relative w-full md:w-20 items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+          className="md:mt-4 relative w-full md:w-20 items-center rounded-md bg-green-300 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-green-300 hover:bg-green-400"
           onClick={toggle}
         >
           {togglePreview ? "Edit" : "Preview"}
@@ -191,7 +191,7 @@ export default function CvBuilder() {
       </div>
       {togglePreview && <div> {previewExperiencesData}</div>}
       {!togglePreview && (
-        <div className="md:w-1/2 md:mx-[170px]">{allExperienceData}</div>
+        <div className="md:w-1/2 md:mx-[190px]">{allExperienceData}</div>
       )}
       <p className="footer-text mt-12 ">CV Builder by Leila ©</p>
     </div>
