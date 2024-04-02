@@ -50,13 +50,11 @@ npx tailwindcss -i ./src/style.css -o ./src/output.css --watch
 
 TODO:
 Design när experience/preview är tom
-CV-sidan
 
 put preview etc in components fields
 messy return in cv Builder. return component Preview with prop toggle.
 <Preview toggle={toggle} previewExperienceData/>
 <Experiences {allExperienceData}/>
-
 
 Clean code
 Colors

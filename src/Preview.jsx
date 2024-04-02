@@ -1,6 +1,5 @@
 import React from "react";
 import formattedDate from "./utils/date";
-import toggle from "./pages/CvBuilder";
 
 //This component gets an object of all current experiences as a prop and renders them with readable HTML as a Preview
 export default function Preview(props) {
@@ -25,7 +24,7 @@ export default function Preview(props) {
                   {props.companyName}
                 </div>
               </h3>
-              <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+              <p className="mt-5 text-sm leading-6 text-gray-600">
                 {props.tasks}
               </p>
             </div>
