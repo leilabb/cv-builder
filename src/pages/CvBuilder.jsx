@@ -47,10 +47,9 @@ export default function CvBuilder() {
       ))
     ) : (
       <div>
-        <h3 className="button" onClick={addExperience}>
+        <h3 className="button mt-2" onClick={addExperience}>
           ADD A NEW EXPERIENCE
         </h3>
-        <img width="70px" height="70px" src="../assets/plus.svg" />
       </div>
     ); //om experienceData tom
 
@@ -71,7 +70,7 @@ export default function CvBuilder() {
       ))
     ) : (
       <div>
-        <h3 className="button" onClick={addExperience}>
+        <h3 className="button mx-[190px] mt-2" onClick={addExperience}>
           There's nothing to preview
         </h3>
       </div>

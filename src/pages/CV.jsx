@@ -78,18 +78,18 @@ export default function CV() {
                   React
                 </span>
                 <span class="w-fit inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-                  Javascript
+                  TypeScript
                 </span>
                 <span class="w-fit inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
-                  Tailwind.css
+                  Svelte/SvelteKit
                 </span>
               </div>
               <div className="space-x-2 space-y-2">
                 <span class="w-fit inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
-                  Svelte/SvelteKit
+                  Wordpress
                 </span>
                 <span class="w-fit inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-                  Wordpress
+                  Tailwind.css
                 </span>
                 <span class="w-fit inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">
                   Git
