@@ -47,7 +47,8 @@ Tailwind watch command
 npx tailwindcss -i ./src/style.css -o ./src/output.css --watch
 
 TODO:
-Design när experience/preview är tom
+Knappfärger
+Skriva readme
 
 put preview etc in components fields
 messy return in cv Builder. return component Preview with prop toggle.
@@ -55,7 +56,6 @@ messy return in cv Builder. return component Preview with prop toggle.
 <Experiences {allExperienceData}/>
 
 Clean code
-Add colors
 
 clean code: 
 remove unused css classes from styles.css

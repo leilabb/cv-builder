@@ -594,19 +594,9 @@ video {
   margin: 2rem;
 }
 
-.mx-\[190px\] {
-  margin-left: 190px;
-  margin-right: 190px;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.mx-\[170px\] {
-  margin-left: 170px;
-  margin-right: 170px;
 }
 
 .-ml-0 {
@@ -673,10 +663,6 @@ video {
   margin-top: 3rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -739,6 +725,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .w-24 {
@@ -887,7 +877,7 @@ video {
 
 .bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(247 183 63 / var(--tw-bg-opacity));
+  background-color: rgb(251 231 198 / var(--tw-bg-opacity));
 }
 
 .bg-red-50 {
@@ -903,6 +893,11 @@ video {
 .bg-yellow-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
+}
+
+.bg-button {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 183 63 / var(--tw-bg-opacity));
 }
 
 .p-12 {
@@ -952,10 +947,6 @@ video {
   text-align: center;
 }
 
-.align-middle {
-  vertical-align: middle;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -987,10 +978,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.italic {
-  font-style: italic;
 }
 
 .leading-6 {
@@ -1037,19 +1024,9 @@ video {
   color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-yellow-800 {
   --tw-text-opacity: 1;
   color: rgb(133 77 14 / var(--tw-text-opacity));
-}
-
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .shadow-sm {
@@ -1091,7 +1068,7 @@ video {
 
 .ring-primary {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(247 183 63 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(251 231 198 / var(--tw-ring-opacity));
 }
 
 .ring-red-600\/10 {
@@ -1100,6 +1077,11 @@ video {
 
 .ring-yellow-600\/20 {
   --tw-ring-color: rgb(202 138 4 / 0.2);
+}
+
+.ring-button {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(247 183 63 / var(--tw-ring-opacity));
 }
 
 .filter {
@@ -2004,6 +1986,11 @@ input:focus {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-darker:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 155 12 / var(--tw-bg-opacity));
+}
+
 .group:hover .group-hover\:text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
@@ -2102,11 +2089,6 @@ input:focus {
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:w-fit {
-    width: -moz-fit-content;
-    width: fit-content;
   }
 
   .md\:flex-row {

@@ -82,7 +82,7 @@ export default function Header() {
               type="button"
               className="md:py-0 relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
             >
-              <img src={linkedinLogo} className=" -ml-0.5 mr-1.5 h-5 w-5" />
+              <img src={linkedinLogo} className=" -ml-0.5 mr-1.5 h-auto w-5" />
               <span>
                 <a
                   href="https://linkedin.com/in/leila-ben-halima/"

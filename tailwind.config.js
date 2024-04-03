@@ -4,12 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#f7b73f",
+        primary: "#FBE7C6",
         darker: "#f39b0c",
-        purple: "#983A68",
+        button: "#f7b73f",
         creme: "#FEF3DF",
       },
     },
   },
   plugins: [],
 };
+//primary: "#f7b73f",
