@@ -5,7 +5,7 @@ import Preview from "../Preview";
 import { nanoid } from "nanoid";
 import "../style.css";
 import { NavLink } from "react-router-dom";
-import { HomeIcon } from "@heroicons/react/20/solid";
+import { HomeIcon, PlusIcon } from "@heroicons/react/20/solid";
 
 export default function CvBuilder() {
   //initialize state from whatever is stored in localstorage. if there is nothing in localstorage: return object with empty data but a new id.
@@ -47,8 +47,11 @@ export default function CvBuilder() {
       ))
     ) : (
       <div>
-        <h3 className="button mt-2" onClick={addExperience}>
-          ADD A NEW EXPERIENCE
+        <h3 className="mt-4" onClick={addExperience}>
+          <button className="md:mt-4 inline-flex relative w-fit md:w-22 items-center rounded-md bg-primary px-3 py-2 text-lg font-semibold text-gray-800 shadow-sm ring-1 ring-inset ring-primary hover:bg-[#f39b0c]">
+            <PlusIcon className="h-5 w-5" />
+            Add experience
+          </button>
         </h3>
       </div>
     ); //om experienceData tom
@@ -70,9 +73,9 @@ export default function CvBuilder() {
       ))
     ) : (
       <div>
-        <h3 className="button mx-[190px] mt-2" onClick={addExperience}>
-          There's nothing to preview
-        </h3>
+        <p className="text-xl mx-auto mt-8 text-center" onClick={addExperience}>
+          Oops, there's nothing to preview...
+        </p>
       </div>
     ); //om experienceData tom
 
