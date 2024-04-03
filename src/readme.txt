@@ -47,9 +47,6 @@ Tailwind watch command
 npx tailwindcss -i ./src/style.css -o ./src/output.css --watch
 
 TODO:
-Knappfärger
-Skriva readme
-
 put preview etc in components fields
 messy return in cv Builder. return component Preview with prop toggle.
 <Preview toggle={toggle} previewExperienceData/>
@@ -61,3 +58,9 @@ clean code:
 remove unused css classes from styles.css
 refactor - props.id i Experience - lägga in den en gång bara högst upp
 
+Readme:
+1. npm run dev
+2. npx tailwindcss -i ./src/style.css -o ./src/output.css --watch
+3. Navigate to CV Builder
+4. Add/edit experiences and preview them
+5. Header stays the same and can only be changed in code
