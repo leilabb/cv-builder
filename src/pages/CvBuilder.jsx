@@ -168,7 +168,6 @@ export default function CvBuilder() {
   function toggle() {
     setTogglePreview((prevToggleState) => !prevToggleState);
   }
-
   return (
     <div className="w-screen">
       <div className="md:mx-40">
@@ -188,6 +187,7 @@ export default function CvBuilder() {
           className="md:mt-4 relative w-full md:w-20 items-center rounded-md bg-button px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-button hover:bg-darker"
           onClick={toggle}
         >
+          {buttonLabel}
           {togglePreview ? "Edit" : "Preview"}
         </button>
       </div>
