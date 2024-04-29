@@ -13,4 +13,3 @@ export default {
   },
   plugins: [],
 };
-//primary: "#f7b73f",

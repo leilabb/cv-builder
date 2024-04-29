@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import formattedDate from "../utils/date";
-import Header from "../Header";
+import Header from "../components/Header";
 import { HomeIcon } from "@heroicons/react/20/solid";
 
 const data = [

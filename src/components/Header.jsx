@@ -4,8 +4,8 @@ import {
   PhoneIcon,
   AcademicCapIcon,
 } from "@heroicons/react/20/solid";
-import githubLogo from "./assets/github-mark.png";
-import linkedinLogo from "./assets/linkedin.png";
+import githubLogo from "../assets/github-mark.png";
+import linkedinLogo from "../assets/linkedin.png";
 
 export default function Header() {
   return (
@@ -29,7 +29,7 @@ export default function Header() {
                   <AcademicCapIcon className="mr-2 h-6 w-6 md:h-5 md:w-5 text-gray-500" />{" "}
                   Bachelor's degree in Computer Science
                 </p>
-                <p className="ml-8">Uppsala University, 2014</p>
+                <p className="ml-8 md:ml-7">Uppsala University, 2014</p>
               </p>
             </div>
           </div>

@@ -683,6 +683,10 @@ video {
   margin-top: 2rem;
 }
 
+.ml-7 {
+  margin-left: 1.75rem;
+}
+
 .flex {
   display: flex;
 }
@@ -2040,6 +2044,10 @@ input:focus {
 
   .md\:mt-40 {
     margin-top: 10rem;
+  }
+
+  .md\:ml-7 {
+    margin-left: 1.75rem;
   }
 
   .md\:flex {
