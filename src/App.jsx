@@ -1,5 +1,5 @@
 import "./style.css";
-import { Link, NavLink, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import CvBuilder from "./pages/CvBuilder";
 import CV from "./pages/CV";
