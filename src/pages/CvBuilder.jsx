@@ -1,11 +1,13 @@
 import React from "react";
 import Header from "../components/Header";
-import Experience from "../components/Experience";
+import ExperienceList from "../components/ExperienceList";
+import Footer from "../components/Footer";
 import Preview from "../components/Preview";
-import { nanoid } from "nanoid";
+import HeaderEdit from "../components/HeaderEdit";
 import "../style.css";
 import { NavLink } from "react-router-dom";
 import { HomeIcon } from "@heroicons/react/20/solid";
+import { nanoid } from "nanoid";
 
 export default function CvBuilder() {
   //initialize state from whatever is stored in localstorage. if there is nothing in localstorage: return object with empty data but a new id.
@@ -27,24 +29,25 @@ export default function CvBuilder() {
     localStorage.setItem("toggle", togglePreview);
   }, [experienceData, togglePreview]);
 
-  //updates state with input of that particular component (with help of ID from event)
-  function onChange(event) {
-    const { name } = event.target; //destructure event
-
-    const updatedExperienceData = experienceData.map((experience) => {
-      return experience.id === event.target.id
-        ? {
-            ...experience,
-            data: {
-              ...experience.data,
-              [name]: event.target.value,
-            },
-          }
-        : experience; // else return experience
-    });
-    setExperienceData(updatedExperienceData);
+  function addExperience() {
+    const newExperienceData = [...experienceData]; //ny lista, kopia av gamla experienceData
+    newExperienceData.push(
+      //lägg in ett nytt, tomt objekt sist i listan, med nytt id
+      {
+        id: nanoid(),
+        data: {
+          fromPeriod: "",
+          toPeriod: "",
+          companyName: "",
+          city: "",
+          tasks: "",
+        },
+      }
+    );
+    setExperienceData(
+      newExperienceData //set state till den b listan
+    );
   }
-
   return (
     <div className="w-screen">
       <div className="md:mx-40">
@@ -58,7 +61,7 @@ export default function CvBuilder() {
           </button>
         </NavLink>
       </div>
-      <Header />
+      {togglePreview ? <Header /> : <HeaderEdit />}
       <div className="md:mx-48">
         <button
           className="md:mt-4 relative w-full md:w-20 items-center rounded-md bg-button px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-button hover:bg-darker"
@@ -68,16 +71,16 @@ export default function CvBuilder() {
         </button>
       </div>
       {togglePreview && (
-        <Preview
-          togglePreview={togglePreview}
-          onClick={toggle}
-          data={experienceData}
-        />
+        <Preview data={experienceData} addExperience={addExperience} />
       )}
       {!togglePreview && (
-        <Experience updateData={setExperienceData} data={experienceData} />
+        <ExperienceList
+          data={experienceData}
+          setExperienceData={setExperienceData}
+          addExperience={addExperience}
+        />
       )}
-      <p className="footer-text mt-12 ">CV Builder by Leila ©</p>
+      <Footer />
     </div>
   );
 }
