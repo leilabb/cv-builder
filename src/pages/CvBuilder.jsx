@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import ExperienceList from "../components/ExperienceList";
 import Footer from "../components/Footer";
 import Preview from "../components/Preview";
-import HeaderEdit from "../components/HeaderEdit";
+//import HeaderEdit from "../components/HeaderEdit";
 import "../style.css";
 import { NavLink } from "react-router-dom";
 import { HomeIcon } from "@heroicons/react/20/solid";
@@ -61,7 +61,8 @@ export default function CvBuilder() {
           </button>
         </NavLink>
       </div>
-      {togglePreview ? <Header /> : <HeaderEdit />}
+      <Header />
+      {/* {togglePreview ? <Header /> : <HeaderEdit />}*/}
       <div className="md:mx-48">
         <button
           className="md:mt-4 relative w-full md:w-20 items-center rounded-md bg-button px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-button hover:bg-darker"
