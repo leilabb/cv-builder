@@ -1,8 +1,9 @@
 import React from "react";
 
-//sätta id högst upp
 export default function Toolbar(props) {
-  //props should be experiencedata from current/selected Experience
+  const experienceData = props.data;
+  const setExperienceData = props.setExperienceData;
+
   function removeExperience(event) {
     const prevExperienceData = [...experienceData]; //kopia av gamla experience-listan
     const updatedExperienceData = prevExperienceData.filter((experience) => {
@@ -10,13 +11,12 @@ export default function Toolbar(props) {
     });
     setExperienceData(updatedExperienceData);
   }
+
   function moveUpExperience(event) {
     const clickedId = event.target.id;
     const indexClickedId = Object.values(experienceData).findIndex(
       (experience) => experience.id === clickedId
     );
-    //if one experience do nothing
-
     if (indexClickedId < 1) {
       return experienceData;
     } else {
@@ -26,7 +26,7 @@ export default function Toolbar(props) {
       //switch experiences
       updatedExperienceData[indexClickedId] = previousExperience;
       updatedExperienceData[indexClickedId - 1] = currentExperience;
-      props.updatedExperienceData(updatedExperienceData);
+      setExperienceData(updatedExperienceData);
     }
   }
 
@@ -50,62 +50,37 @@ export default function Toolbar(props) {
     }
   }
 
-  function addExperience() {
-    const newExperienceData = [...experienceData]; //ny lista, kopia av gamla experienceData
-    newExperienceData.push(
-      //lägg in ett nytt, tomt objekt sist i listan, med nytt id
-      {
-        id: nanoid(),
-        data: {
-          fromPeriod: "",
-          toPeriod: "",
-          companyName: "",
-          city: "",
-          tasks: "",
-        },
-      }
-    );
-    setExperienceData(
-      newExperienceData //set state till den nya listan
-    );
-  }
-
   return (
     <div className="toolbar">
       <img
         name="bin"
         id={props.id}
-        onClick={(event) => props.handleClick(event)}
-        // onClick={props.handleClick}
+        onClick={removeExperience}
         className="toolbar-icon cursor-pointer"
         src="../assets/bin.svg"
-        handleClick={removeExperience}
       />
 
       <img
         id={props.id}
         name="arrow-up"
-        onClick={(event) => props.handleClick(event)}
+        onClick={moveUpExperience}
         className="toolbar-icon cursor-pointer"
         src="../assets/arrow-up.svg"
-        handleClick={moveUpExperience}
       />
 
       <img
         id={props.id}
         name="arrow-down"
-        onClick={(event) => props.handleClick(event)}
         className="toolbar-icon cursor-pointer"
         src="../assets/arrow-down.svg"
-        handleClick={moveDownExperience}
+        onClick={moveDownExperience}
       />
 
       <img
         name="plus"
-        onClick={(event) => props.handleClick(event)}
         className="toolbar-icon cursor-pointer"
         src="../assets/plus.svg"
-        handleClick={addExperience}
+        onClick={props.addExperience}
       />
     </div>
   );
