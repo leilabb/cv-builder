@@ -2046,6 +2046,10 @@ input:focus {
     margin-top: 10rem;
   }
 
+  .md\:ml-\[185px\] {
+    margin-left: 185px;
+  }
+
   .md\:flex {
     display: flex;
   }
