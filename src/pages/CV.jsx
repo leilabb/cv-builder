@@ -22,6 +22,16 @@ const data = [
   },
 ];
 export default function CV() {
+  const experiences = [
+    {
+      fromPeriod: "2021-03-15",
+      toPeriod: "2022-05-06",
+      city: "Uppsala",
+      companyName: "Prototyp",
+      tasks: "Fullstack developer, Svelte/SvelteKit",
+    },
+  ];
+
   return (
     <div className="container">
       <div className="">
