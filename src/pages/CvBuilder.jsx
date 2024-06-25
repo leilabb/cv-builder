@@ -62,19 +62,22 @@ export default function CvBuilder() {
         </NavLink>
       </div>
       <Header />
-      {/* {togglePreview ? <Header /> : <HeaderEdit />}*/}
-      <div className="md:mx-48">
+      <div className="md:mx-48 flex-col ">
         <button
           className="md:mt-4 relative w-full md:w-20 items-center rounded-md bg-button px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-button hover:bg-darker"
           onClick={toggle}
         >
           {togglePreview ? "Edit" : "Preview"}
         </button>
+        {togglePreview && (
+          <button className="md:ml-2 md:mt-4 md:w-24  relative w-full items-center rounded-md bg-green px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-green hover:bg-darkergreen">
+            Download
+          </button>
+        )}
       </div>
-      {togglePreview && (
+      {togglePreview ? (
         <Preview data={experienceData} addExperience={addExperience} />
-      )}
-      {!togglePreview && (
+      ) : (
         <ExperienceList
           data={experienceData}
           setExperienceData={setExperienceData}
