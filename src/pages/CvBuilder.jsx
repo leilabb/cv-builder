@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import ExperienceList from "../components/ExperienceList";
 import Footer from "../components/Footer";
 import Preview from "../components/Preview";
-//import HeaderEdit from "../components/HeaderEdit";
+import screenShot from "../utils/htmltoImage.jsx";
 import "../style.css";
 import { NavLink } from "react-router-dom";
 import { HomeIcon } from "@heroicons/react/20/solid";
@@ -48,6 +48,7 @@ export default function CvBuilder() {
       newExperienceData //set state till den b listan
     );
   }
+
   return (
     <div className="w-screen">
       <div className="md:mx-40">
@@ -62,16 +63,24 @@ export default function CvBuilder() {
         </NavLink>
       </div>
       <Header />
-      <div className="md:mx-48 flex-col ">
+      <div className="md:mx-48 flex-col">
         <button
           className="md:mt-4 relative w-full md:w-20 items-center rounded-md bg-button px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-button hover:bg-darker"
           onClick={toggle}
         >
           {togglePreview ? "Edit" : "Preview"}
         </button>
+
         {togglePreview && (
-          <button className="md:ml-2 md:mt-4 md:w-24  relative w-full items-center rounded-md bg-green px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-green hover:bg-darkergreen">
+          <button
+            onClick={screenShot}
+            className="md:ml-2 md:mt-4 md:w-24 relative w-full items-center rounded-md bg-green px-3 py-2 text-sm font-semibold text-gray-900  ring-green hover:bg-darkergreen"
+          >
             Download
+            {/* <button
+            onClick={screenShot}
+            className="md:ml-2 md:mt-4 md:w-24 relative w-full items-center rounded-md bg-green px-3 py-2 text-sm font-semibold shadow-sm text-gray-900  ring-1 ring-inset ring-green hover:bg-darkergreen"
+          ></button> */}
           </button>
         )}
       </div>

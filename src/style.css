@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
 /*
 ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
 */
@@ -554,10 +555,12 @@ video {
 
 * {
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+
+  /*font-family: "Nunito", sans-serif;*/
+  /*font-family: "Arial", sans-serif;*/
 }
 
-@font-face {
+/* @font-face {
   font-family: "YoungSerif-Regular";
 
   src: url(../Fonts/YoungSerif/YoungSerif-Regular.ttf);
@@ -567,7 +570,7 @@ video {
   font-family: "Nunito";
 
   src: url(../Fonts/Nunito/NunitoSans.ttf);
-}
+} */
 
 @media only screen and (max-width: 600px) {
   * {
@@ -606,7 +609,7 @@ video {
 body {
   margin: 0;
   padding: 1rem;
-  font-family: "Nunito", sans-serif;
+  font-family: sans-serif;
   font-size: 14px;
   background-color: rgb(253, 252, 251);
   /* centers the content  */
@@ -628,7 +631,8 @@ h1 {
   font-weight: 800;
   font-size: 40px;
   margin: 0;
-  font-family: "YoungSerif-Regular", sans-serif;
+  /*font-family: "YoungSerif-Regular", sans-serif;*/
+  font-family: sans-serif;
 }
 
 h2 {
@@ -636,7 +640,8 @@ h2 {
   font-size: 34px;
   margin: 0;
   text-transform: uppercase;
-  font-family: "YoungSerif-Regular", sans-serif;
+  /*  font-family: "YoungSerif-Regular", sans-serif;*/
+  font-family: sans-serif;
 }
 
 h3 {
@@ -649,7 +654,7 @@ a {
   color: black;
 }
 
-.export-button {
+/* .export-button {
   border: solid 1px #dd403a;
   border-radius: 10px;
   background-color: #dd403a;
@@ -662,7 +667,7 @@ a {
 
 .export-button:hover {
   background-color: rgb(225, 3, 3);
-}
+} */
 
 .header {
   background: #b29a9194;
@@ -816,17 +821,6 @@ input:focus {
 }
 
 .companyInfoPrv {
-  /* font-weight: bold;
-  box-shadow: 1px 1px 1px 1px #626267;
-  width: fit-content;
-  border: 1px solid rgb(203, 163, 130);
-  border-radius: 10px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  background-color: #e3dbd4;
-  font-weight: bold;
-  font-size: 12px;
-  padding: 0px 5px 0px 5px; */
   background-color: #e9dccb;
   display: flex;
   border-radius: 10px;
