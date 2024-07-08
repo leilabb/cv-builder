@@ -1644,11 +1644,10 @@ video {
 
 * {
   box-sizing: border-box;
-  /*font-family: "Nunito", sans-serif;*/
-  /*font-family: "Arial", sans-serif;*/
+  font-family: "Nunito", sans-serif;
 }
 
-/* @font-face {
+@font-face {
   font-family: "YoungSerif-Regular";
 
   src: url(../Fonts/YoungSerif/YoungSerif-Regular.ttf);
@@ -1658,7 +1657,7 @@ video {
   font-family: "Nunito";
 
   src: url(../Fonts/Nunito/NunitoSans.ttf);
-} */
+}
 
 @media only screen and (max-width: 600px) {
   * {
@@ -1697,7 +1696,7 @@ video {
 body {
   margin: 0;
   padding: 1rem;
-  font-family: sans-serif;
+  font-family: Nunito;
   font-size: 14px;
   background-color: rgb(253, 252, 251);
   /* centers the content  */
@@ -1720,8 +1719,7 @@ h1 {
   font-weight: 800;
   font-size: 40px;
   margin: 0;
-  /*font-family: "YoungSerif-Regular", sans-serif;*/
-  font-family: sans-serif;
+  font-family: "YoungSerif-Regular", sans-serif;
 }
 
 h2 {
@@ -1729,7 +1727,7 @@ h2 {
   font-size: 34px;
   margin: 0;
   text-transform: uppercase;
-  /*  font-family: "YoungSerif-Regular", sans-serif;*/
+  font-family: "YoungSerif-Regular", sans-serif;
   font-family: sans-serif;
 }
 
@@ -1742,21 +1740,6 @@ h3 {
 a {
   color: black;
 }
-
-/* .export-button {
-  border: solid 1px #dd403a;
-  border-radius: 10px;
-  background-color: #dd403a;
-  color: white;
-  padding: 10px;
-  z-index: 5;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-}
-
-.export-button:hover {
-  background-color: rgb(225, 3, 3);
-} */
 
 .header {
   background: #b29a9194;
