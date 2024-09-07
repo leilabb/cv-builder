@@ -5,7 +5,7 @@ import {
   AcademicCapIcon,
 } from "@heroicons/react/20/solid";
 import githubLogo from "../assets/github-mark.png";
-import linkedinLogo from "../assets/linkedin.png";
+import linkedinLogo from "../assets/linkedIn.png";
 
 export default function Header() {
   return (

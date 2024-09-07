@@ -10,7 +10,7 @@ const data = [
     city: "Uppsala",
     companyName: "Prototyp",
     tasks:
-      "Fullstack developer. Worked on website functionality/features and design. Svelte/SvelteKit.",
+      "Fullstack developer. Worked on website functionality/features and design as well as testing in Playwright and Vitest. Svelte/SvelteKit.",
   },
   {
     fromPeriod: "2023-02",
