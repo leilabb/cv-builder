@@ -1,8 +1,13 @@
-# React + Vite
+#Resume builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Stack:
+React.js
+Tailwind
+Vite
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Functions:
+-Edit mode: Add/Remove/Move around experiences.
+-Preview mode: Preview your resume. Download screenshot of your resume.
+-Responsive.
+-Saves state in between refreshes.
+-Right now limited to my personal use (header info cannot be changed and it's on localhost).
