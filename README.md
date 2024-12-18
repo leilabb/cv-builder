@@ -7,6 +7,9 @@ Stack:
 </li>
 <li>
 Vite  
+</li>
+<li>
+Firebase 
 </li></ul>
 
 
