@@ -1,5 +1,5 @@
 import React from "react";
-import formattedDate from "../utils/date";
+import formattedDate from "../../utils/date";
 
 //This component gets an object of all current experiences as a prop and renders them with readable HTML as a Preview
 export default function Preview(props) {

@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../components/Header";
-import ExperienceList from "../components/ExperienceList";
-import Footer from "../components/Footer";
-import Preview from "../components/Preview";
-import screenShot from "../utils/htmltoImage.jsx";
-import "../style.css";
+import Header from "./../../components/Resume builder/Header.jsx";
+import ExperienceList from "./../../components/Resume builder/ExperienceList.jsx";
+import Footer from "./../../components/Resume builder/Footer.jsx";
+import Preview from "./../../components/Resume builder/Preview.jsx";
+import screenShot from "./../../utils/htmltoImage.jsx";
+import "./../../style.css";
 import { NavLink } from "react-router-dom";
 import { HomeIcon } from "@heroicons/react/20/solid";
 import { nanoid } from "nanoid";
@@ -77,10 +77,6 @@ export default function CvBuilder() {
             className="md:ml-2 md:mt-4 md:w-24 relative w-full items-center rounded-md bg-green px-3 py-2 text-sm font-semibold text-gray-900  ring-green hover:bg-darkergreen"
           >
             Download
-            {/* <button
-            onClick={screenShot}
-            className="md:ml-2 md:mt-4 md:w-24 relative w-full items-center rounded-md bg-green px-3 py-2 text-sm font-semibold shadow-sm text-gray-900  ring-1 ring-inset ring-green hover:bg-darkergreen"
-          ></button> */}
           </button>
         )}
       </div>
