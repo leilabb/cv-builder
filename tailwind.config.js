@@ -14,6 +14,14 @@ export default {
         olivegreen: "#6a9b72",
         header: "#b7a193",
       },
+      keyframes: {
+        typewriter: {
+          to: { left: "100%" },
+        },
+      },
+      animation: {
+        typewriter: "typewriter 4s steps(10) forwards",
+      },
     },
   },
   plugins: [],

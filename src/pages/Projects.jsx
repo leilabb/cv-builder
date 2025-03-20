@@ -5,7 +5,10 @@ export default function Projects() {
       {" "}
       <div className="flex flex-col w-1/2 px-4 ">
         {" "}
-        <div className="text-4xl flex font-medium">About me</div>
+        <div className="text-4xl flex font-medium">
+          {" "}
+          <a id="projects">Projects</a>
+        </div>
         <p className="mt-4 flex-col">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

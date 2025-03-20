@@ -6,7 +6,6 @@ export default function Header() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      //varje gång man scrollar
       if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
@@ -16,15 +15,25 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="sticky top-0 bg-transparent">
+    <div className="sticky top-0 z-10 ">
       <div
         className={`w-full h-32 text-xl p-1.5 flex items-center justify-center flex-wrap gap-8 
   ${isScrolled ? "bg-header duration-200" : ""}`}
       >
-        <p className="font-[Carlito]">Home</p>
-        <p className="font-[Carlito]">Skills</p>
-        <p className="font-[Carlito]">Projects</p>
-        <p className="font-[Carlito]">Contact</p>
+        <p className="font-[Carlito]">
+          <a href="/">Home</a>
+        </p>
+        <p className="font-[Carlito]">
+          <a href="#about-me">Skills</a>
+        </p>
+        <p className="font-[Carlito]">
+          {" "}
+          <a href="#projects">Projects</a>
+        </p>
+        <p className="font-[Carlito]">
+          {" "}
+          <a href="#contact">Contact</a>
+        </p>
       </div>
     </div>
   );
