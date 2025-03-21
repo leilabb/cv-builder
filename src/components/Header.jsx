@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-export default function Header() {
+export default function Header({ isDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -15,24 +14,42 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="sticky top-0 z-10 ">
+    <div className="sticky top-0 z-20 ">
       <div
         className={`w-full h-32 text-xl p-1.5 flex items-center justify-center flex-wrap gap-8 
-  ${isScrolled ? "bg-header duration-200" : ""}`}
+  ${isScrolled ? "bg-header duration-200" : ""} 
+`}
       >
         <p className="font-[Carlito]">
-          <a href="/">Home</a>
+          <a className={`${isDarkMode ? "text-white" : "text-black"}`} href="/">
+            Home
+          </a>
         </p>
         <p className="font-[Carlito]">
-          <a href="#about-me">Skills</a>
+          <a
+            className={`${isDarkMode ? "text-white" : "text-black"}`}
+            href="#about-me"
+          >
+            Skills
+          </a>
         </p>
         <p className="font-[Carlito]">
           {" "}
-          <a href="#projects">Projects</a>
+          <a
+            className={`${isDarkMode ? "text-white" : "text-black"}`}
+            href="#projects"
+          >
+            Projects
+          </a>
         </p>
         <p className="font-[Carlito]">
           {" "}
-          <a href="#contact">Contact</a>
+          <a
+            className={`${isDarkMode ? "text-white" : "text-black"}`}
+            href="#contact"
+          >
+            Contact
+          </a>
         </p>
       </div>
     </div>
