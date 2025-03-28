@@ -16,8 +16,17 @@ export default function Header({ isDarkMode }) {
   return (
     <div className="sticky top-0 z-20 ">
       <div
-        className={`w-full h-32 text-xl p-1.5 flex items-center justify-center flex-wrap gap-8 
-  ${isScrolled ? "bg-header duration-200" : ""} 
+        className={`w-full h-32 text-xl p-1.5 flex items-center justify-center flex-wrap gap-8  ${
+          isDarkMode ? "bg-gray-900" : ""
+        }
+    ${
+      isScrolled
+        ? isDarkMode
+          ? "bg-gray-900"
+          : "bg-olivegreen duration-200"
+        : ""
+    }
+
 `}
       >
         <p className="font-[Carlito]">

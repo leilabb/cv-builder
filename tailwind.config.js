@@ -20,7 +20,7 @@ export default {
         },
       },
       animation: {
-        typewriter: "typewriter 4s steps(10) forwards",
+        typewriter: "typewriter 3s steps(10) forwards",
       },
     },
   },
