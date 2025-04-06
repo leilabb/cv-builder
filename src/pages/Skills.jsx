@@ -1,5 +1,4 @@
 import React from "react";
-import aboutImg from "./../assets/about-img.jpg";
 import wp from "./../assets/devtools/wp.png";
 import github from "./../assets/devtools/github.png";
 import js from "./../assets/devtools/js.png";
@@ -9,81 +8,57 @@ import svelte from "./../assets/devtools/svelte.png";
 import tailwind from "./../assets/devtools/tailwind.png";
 import typescript from "./../assets/devtools/typescript.png";
 import node from "./../assets/devtools/node.png";
+import ProjectCard from "../components/ProjectCard";
+import resumeBuilder from "./../assets/resumeBuilder.png";
 
-export default function Skills() {
+export default function Skills({ isDarkMode }) {
+  let skills = [
+    { title: "Wordpress", source: wp },
+    { title: "Github", source: github },
+    { title: "JavaScript", source: js },
+    { title: "Mongo", source: mongo },
+    { title: "React", source: react },
+    { title: "SvelteKit", source: svelte },
+    { title: "Tailwind", source: tailwind },
+    { title: "Typescript", source: typescript },
+    { title: "Node", source: node },
+  ];
   return (
-    <div className="flex items-center px-16 pb-10 justify-center bg-background">
-      {" "}
-      <div className="flex flex-col w-1/2 px-4">
-        {" "}
-        <div className="text-4xl flex font-medium">
-          <a id="about-me">About me</a>
+    <div
+      className={`flex items-center justify-center md:px-48 md:py-10 ${
+        isDarkMode ? "bg-black" : "bg-background"
+      }`}
+    >
+      <div>
+        <div className="text-4xl font-[Radley] mt-10 flex items-center justify-center ">
+          These are my skills
         </div>
-        <img
-          src={aboutImg}
-          className="w-64 h-56 border rounded-full border-black"
-        />
-        <p className="mt-4 flex-col">
-          I'm from Sweden but I currently live in the South of Spain. I have a
-          Bachelors Degree in Computer Science. I speak six languages fluently.
-          The last few years I have been working with CRM/marketing and
-          e-commerce at the airline Scandinavian Airlines and the Swedish
-          newspaper Aftonbladet.
-        </p>
-      </div>
-      <div className="w-1/2 px-4">
-        <div className="text-4xl font-medium">Skills & Projects</div>
 
-        <p className="mt-4 flex-col">
-          I have worked as both front-end and fullstack. I also have some of my
-          own projects.
-        </p>
-        <div className="flex flex-col md:flex-row mt-10  gap-x-3">
-          <img
-            className="w-12 h-12 hover:animate-bounce"
-            title="Wordpress"
-            src={wp}
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 mt-20">
+          {skills.map((skill) => {
+            return (
+              <div className=" flex justify-center md:gap-x-1">
+                <img
+                  className="w-12 h-12 p-1 hover:animate-bounce"
+                  title={skill.title}
+                  src={skill.source}
+                />
+              </div>
+            );
+          })}
+        </div>
+        <div className="text-4xl font-[Radley] mt-20 ">
+          That i learnt from these projects
+        </div>
+        <div className="flex flex-col md:flex-row justify-center items-center">
+          <ProjectCard
+            title="Resume Builder"
+            image={resumeBuilder}
+            link="https://cv-app-9f8d7.web.app/cvBuilder"
+            description="A tool for building a resume."
           />
-          <img
-            className="w-12 h-12 hover:animate-bounce"
-            title="Github"
-            src={github}
-          />
-          <img
-            className="w-12 h-12 hover:animate-bounce"
-            title="Javascript"
-            src={js}
-          />
-          <img
-            className="w-12 h-12 hover:animate-bounce"
-            title="MongoDb"
-            src={mongo}
-          />
-          <img
-            className="w-12 h-12 hover:animate-bounce"
-            title="TypeScript"
-            src={typescript}
-          />
-          <img
-            className="w-12 h-12 hover:animate-bounce"
-            title="Tailwind"
-            src={tailwind}
-          />
-          <img
-            className="w-12 h-12 hover:animate-bounce"
-            title="SvelteKit"
-            src={svelte}
-          />
-          <img
-            className="w-12 h-12 hover:animate-bounce"
-            title="React"
-            src={react}
-          />
-          <img
-            className="w-12 h-12 hover:animate-bounce"
-            title="Node"
-            src={node}
-          />
+          <ProjectCard />
+          {/* <ProjectCard /> */}
         </div>
       </div>
     </div>

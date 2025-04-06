@@ -6,7 +6,6 @@ import CvBuilder from "./pages/Resume builder/CvBuilder";
 import CV from "./pages/CV";
 import Header from "./components/Header";
 import Skills from "./pages/Skills";
-import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
@@ -39,8 +38,7 @@ export default function App() {
         <Route path="/cv" element={<CV />} />
         <Route path="/cvbuilder" element={<CvBuilder />} />
       </Routes>
-      <Skills />
-      <Projects />
+      <Skills isDarkMode={isDarkMode} />
       <Contact />
     </div>
   );
