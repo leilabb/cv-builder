@@ -9,7 +9,6 @@ import tailwind from "./../assets/devtools/tailwind.png";
 import typescript from "./../assets/devtools/typescript.png";
 import node from "./../assets/devtools/node.png";
 import ProjectCard from "../components/ProjectCard";
-import resumeBuilder from "./../assets/resumeBuilder.png";
 
 export default function Skills({ isDarkMode }) {
   let skills = [
@@ -25,19 +24,19 @@ export default function Skills({ isDarkMode }) {
   ];
   return (
     <div
-      className={`flex items-center justify-center md:px-48 md:py-10 ${
+      className={` flex items-center justify-center md:px-48 ${
         isDarkMode ? "bg-black" : "bg-background"
       }`}
     >
       <div>
-        <div className="text-4xl font-[Radley] mt-10 flex items-center justify-center ">
+        <div className="text-4xl font-[Radley] flex items-center justify-center ">
           These are my skills
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 mt-20">
-          {skills.map((skill) => {
+        <div className="max-w-lg mx-auto grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 mt-20">
+          {skills.map((skill, i) => {
             return (
-              <div className=" flex justify-center md:gap-x-1">
+              <div key={i} className="flex justify-center">
                 <img
                   className="w-12 h-12 p-1 hover:animate-bounce"
                   title={skill.title}
@@ -46,19 +45,6 @@ export default function Skills({ isDarkMode }) {
               </div>
             );
           })}
-        </div>
-        <div className="text-4xl font-[Radley] mt-20 ">
-          That i learnt from these projects
-        </div>
-        <div className="flex flex-col md:flex-row justify-center items-center">
-          <ProjectCard
-            title="Resume Builder"
-            image={resumeBuilder}
-            link="https://cv-app-9f8d7.web.app/cvBuilder"
-            description="A tool for building a resume."
-          />
-          <ProjectCard />
-          {/* <ProjectCard /> */}
         </div>
       </div>
     </div>
