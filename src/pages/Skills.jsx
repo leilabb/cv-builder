@@ -8,7 +8,6 @@ import svelte from "./../assets/devtools/svelte.png";
 import tailwind from "./../assets/devtools/tailwind.png";
 import typescript from "./../assets/devtools/typescript.png";
 import node from "./../assets/devtools/node.png";
-import ProjectCard from "../components/ProjectCard";
 
 export default function Skills({ isDarkMode }) {
   let skills = [
