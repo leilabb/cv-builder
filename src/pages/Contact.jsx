@@ -5,31 +5,42 @@ export default function Contact() {
       {" "}
       <div className="flex flex-col w-1/2 px-4 ">
         {" "}
-        <div className="text-4xl flex font-medium">
-          {" "}
-          <a id="contact">Contact</a>
+        <div className="text-4xl mb-10 font-[UbuntuMono] flex items-center justify-center ">
+          Intrigued? Want to know more?
         </div>
-        <p className="mt-4 flex-col">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-      <div className="w-1/2 px-4">
-        <div className="text-4xl font-medium">Skills</div>
-        <p className="mt-4 flex-col">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <div className="text-xl font-[UbuntuMono] ">
+          <a
+            className="text-xl font-[UbuntuMono]  text-cyan-500"
+            href="mailto:leila.benhalima2@gmail.com"
+            target="_blank"
+          >
+            Send me an e-mail
+          </a>{" "}
+          or{" "}
+          <a
+            className="text-xl font-[UbuntuMono] text-cyan-500 "
+            href="https://www.linkedin.com/in/leila-ben-halima/"
+            target="_blank"
+          >
+            reach out on LinkedIn.{" "}
+          </a>
+          Or just like a portrait of mine on my{" "}
+          <a
+            className="text-xl font-[UbuntuMono]  text-cyan-500"
+            href="https://www.instagram.com/art_and_such__/"
+            target="_blank"
+          >
+            art instagram. {""}
+          </a>
+          Check out
+          <a
+            className="text-xl font-[UbuntuMono]  text-cyan-500"
+            href="https://cv-app-9f8d7.web.app/assets/full-resume.pdf"
+            target="_blank"
+          >
+            {""} my full resume.
+          </a>
+        </div>
       </div>
     </div>
   );

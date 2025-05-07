@@ -42,7 +42,7 @@ export default function Home({ isDarkMode }) {
           </h1>
         </div>
       </div>
-      <p className={`font-[Ubuntu] text-4xl`}>A web developer.</p>
+      <p className={`font-[UbuntuMono] text-4xl`}>A web developer.</p>
       <p className=" font-[Radley] flex-row md:flex mt-28 text-xl animate-pulse ">
         Scroll
         <ChevronDoubleDownIcon className="w-4 h-4 mt-2 " />

@@ -618,6 +618,10 @@ video {
   margin-top: -3px;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -756,6 +760,10 @@ video {
 
 .h-8 {
   height: 2rem;
+}
+
+.h-\[200px\] {
+  height: 200px;
 }
 
 .h-\[500px\] {
@@ -998,6 +1006,11 @@ video {
   background-color: rgb(247 183 63 / var(--tw-bg-opacity));
 }
 
+.bg-cyan-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 182 212 / var(--tw-bg-opacity));
+}
+
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -1016,11 +1029,6 @@ video {
 .bg-indigo-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
-}
-
-.bg-olivegreen {
-  --tw-bg-opacity: 1;
-  background-color: rgb(106 155 114 / var(--tw-bg-opacity));
 }
 
 .bg-primary {
@@ -1167,20 +1175,12 @@ video {
   vertical-align: middle;
 }
 
-.font-\[Carlito\] {
-  font-family: Carlito;
-}
-
 .font-\[Radley\] {
   font-family: Radley;
 }
 
 .font-\[UbuntuMono\] {
   font-family: UbuntuMono;
-}
-
-.font-\[Ubuntu\] {
-  font-family: Ubuntu;
 }
 
 .font-sans {
@@ -1265,6 +1265,11 @@ video {
 .text-blue-700 {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.text-cyan-500 {
+  --tw-text-opacity: 1;
+  color: rgb(6 182 212 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {

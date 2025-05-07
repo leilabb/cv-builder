@@ -23,38 +23,48 @@ export default function Header({ isDarkMode }) {
       isScrolled
         ? isDarkMode
           ? "bg-gray-900"
-          : "bg-olivegreen duration-200"
+          : "bg-cyan-500  duration-200"
         : ""
     }
 
 `}
       >
-        <p className="font-[Carlito]">
-          <a className={`${isDarkMode ? "text-white" : "text-black"}`} href="/">
+        <p>
+          <a
+            className={`font-[UbuntuMono] ${
+              isDarkMode ? "text-white" : "text-black"
+            }`}
+            href="/"
+          >
             Home
           </a>
         </p>
-        <p className="font-[Carlito]">
+        <p>
           <a
-            className={`${isDarkMode ? "text-white" : "text-black"}`}
+            className={`font-[UbuntuMono] ${
+              isDarkMode ? "text-white" : "text-black"
+            }`}
             href="#about-me"
           >
             Skills
           </a>
         </p>
-        <p className="font-[Carlito]">
+        <p>
           {" "}
           <a
-            className={`${isDarkMode ? "text-white" : "text-black"}`}
+            className={`font-[UbuntuMono] ${
+              isDarkMode ? "text-white" : "text-black"
+            }`}
             href="#projects"
           >
             Projects
           </a>
         </p>
-        <p className="font-[Carlito]">
-          {" "}
+        <p>
           <a
-            className={`${isDarkMode ? "text-white" : "text-black"}`}
+            className={`font-[UbuntuMono] ${
+              isDarkMode ? "text-white" : "text-black"
+            }`}
             href="#contact"
           >
             Contact

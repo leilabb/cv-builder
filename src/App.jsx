@@ -10,6 +10,8 @@ import Audio from "./components/Audio";
 import Projects from "./pages/Projects";
 import Jobs from "./pages/Jobs";
 import DarkMode from "./components/DarkMode";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [isSoundOn, setIsSoundOn] = useState(false);
@@ -52,6 +54,8 @@ export default function App() {
       <Skills isDarkMode={isDarkMode} />
       <Projects isDarkMode={isDarkMode} />
       <Jobs isDarkMode={isDarkMode} />
+      <Contact isDarkMode={isDarkMode} />
+      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 }

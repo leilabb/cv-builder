@@ -11,7 +11,7 @@ export default function Projects({ isDarkMode }) {
       }`}
     >
       <div>
-        <div className="text-4xl font-[Radley] mt-20 flex justify-center items-center ">
+        <div className="text-4xl font-[UbuntuMono] mt-20 flex justify-center items-center ">
           That i learnt from these projects
         </div>
         <div className="max-w-xl  flex flex-col md:flex-row gap-2 ">

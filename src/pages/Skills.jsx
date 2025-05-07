@@ -1,6 +1,6 @@
 import React from "react";
 import wp from "./../assets/devtools/wp.png";
-import github from "./../assets/devtools/github.png";
+import git from "./../assets/devtools/git.png";
 import js from "./../assets/devtools/js.png";
 import mongo from "./../assets/devtools/mongodb.png";
 import react from "./../assets/devtools/react.png";
@@ -8,11 +8,13 @@ import svelte from "./../assets/devtools/svelte.png";
 import tailwind from "./../assets/devtools/tailwind.png";
 import typescript from "./../assets/devtools/typescript.png";
 import node from "./../assets/devtools/node.png";
+import swift from "./../assets/devtools/swift.png";
+import angular from "./../assets/devtools/angular.png";
 
 export default function Skills({ isDarkMode }) {
   let skills = [
     { title: "Wordpress", source: wp },
-    { title: "Github", source: github },
+    { title: "Git", source: git },
     { title: "JavaScript", source: js },
     { title: "Mongo", source: mongo },
     { title: "React", source: react },
@@ -20,6 +22,8 @@ export default function Skills({ isDarkMode }) {
     { title: "Tailwind", source: tailwind },
     { title: "Typescript", source: typescript },
     { title: "Node", source: node },
+    { title: "Swift", source: swift },
+    { title: "Angular", source: angular },
   ];
   return (
     <div
@@ -28,7 +32,7 @@ export default function Skills({ isDarkMode }) {
       }`}
     >
       <div>
-        <div className="text-4xl font-[Radley] flex items-center justify-center ">
+        <div className="text-4xl font-[UbuntuMono] flex items-center justify-center ">
           These are my skills
         </div>
 
