@@ -1,4 +1,3 @@
-import React from "react";
 import lofiBeat from "./../assets/lofi-beat.mp3";
 import { SpeakerWaveIcon, SpeakerXMarkIcon } from "@heroicons/react/16/solid";
 
@@ -14,7 +13,9 @@ export default function Audio({
       {isSoundOn && (
         <SpeakerWaveIcon
           onClick={handleSound}
-          className={`w-7 h-7 cursor-pointer right-8 z-20 fixed 
+          className={`md:w-7 md:h-7 md:right-[3rem] 
+             w-12 h-12 cursor-pointer 
+              mt-4 z-20 fixed 
             ${isDarkMode && "text-white"}
           `}
         />
@@ -22,7 +23,9 @@ export default function Audio({
       {!isSoundOn && (
         <SpeakerXMarkIcon
           onClick={handleSound}
-          className={`w-7 h-7 cursor-pointer right-8 z-20 fixed 
+          className={`md:w-7 md:h-7 md:right-[3rem] 
+            w-12 h-12 cursor-pointer
+              mt-4 z-20 fixed 
             ${isDarkMode && "text-white"}
           `}
         />

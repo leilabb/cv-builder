@@ -4,7 +4,7 @@ import {
   PhoneIcon,
   AcademicCapIcon,
 } from "@heroicons/react/20/solid";
-import githubLogo from "../../assets/github-mark.png";
+import githubLogo from "../../assets/github.svg";
 import linkedinLogo from "../../assets/linkedIn.png";
 
 export default function Header() {

@@ -39,6 +39,10 @@
 7. Disable tap highlights on iOS
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 #root {

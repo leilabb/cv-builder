@@ -1,47 +1,66 @@
-import React from "react";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
+import Button from "./Button.jsx";
 
-export default function ProjectCard({
-  title,
-  link,
-  image,
-  description,
-  githubLink,
-}) {
+export default function ProjectCard({ projects }) {
+  if (!projects) return null;
   return (
     <div>
-      <div className="mt-10 relative flex h-[500px] w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
-        <div className="relative mx-4 mt-4 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
-          <img className="w-full h-full" src={image} alt="ui/ux review check" />
-          <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
-        </div>
-        <div className="p-6 flex flex-col flex-grow">
-          <div className="mb-3 flex items-center justify-between">
-            <h5 className="block font-sans text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
-              {title}
-            </h5>
+      {projects.map((project, index) => (
+        <div
+          key={index}
+          className="w-full min-h-[250px] mb-4 md:w-[500px] gap-x-4 p-4 bg-text flex border rounded-xl"
+        >
+          {(index % 2 == 0 || index == 0) && (
+            <div className="h-full w-[215px]">
+              <img
+                className="h-full object-fill w-full border rounded-xl"
+                src={project.image}
+              />
+            </div>
+          )}
+          <div className="h-full flex flex-col">
+            <div className="flex font-bold font-[UbuntuMono] text-lg text-white">
+              {project.title}
+            </div>
+            <div className="font-thin max-w-[235px] font-[UbuntuMono] text-sm text-white">
+              {project.description}
+              <Button
+                buttonText="Go to Project"
+                className="block w-fit hover:bg-stone bg-softTeal"
+                link={project.link}
+              />
+              <span className="block underline mt-2">
+                <a
+                  className="font-[UbuntuMono] text-sm text-accent "
+                  href={project.githubLink}
+                >
+                  <ArrowRightIcon className="inline w-4 h-4" />
+                  See project on Github
+                </a>
+              </span>
+            </div>
+            <div className="flex justify-left gap-x-2 mt-4 ">
+              {project.tech.map((techItem) => {
+                return (
+                  <img
+                    key={techItem}
+                    className="h-8 w-8 inline bg-accent border rounded-full p-1"
+                    src={techItem}
+                  />
+                );
+              })}
+            </div>
           </div>
-          <p className="block font-sans text-base font-light leading-relaxed text-gray-700 antialiased">
-            {description}
-          </p>
+          {index % 2 != 0 && (
+            <div className="h-full w-[215px]">
+              <img
+                className="h-full object-fill w-full border rounded-xl"
+                src={project.image}
+              />
+            </div>
+          )}
         </div>
-        <div className="flex flex-col justify-center items-center p-6 pt-3">
-          <a href={link} target="_blank">
-            <button
-              className="block w-full select-none rounded-lg bg-yellow-600 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-black shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              type="button"
-              //data-ripple-light="true"
-            >
-              Go to project
-            </button>
-          </a>
-          <a href={githubLink} target="_blank">
-            <p className="flex justify-center items-center mt-2 underline">
-              {" "}
-              Or check it out on Github
-            </p>{" "}
-          </a>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }

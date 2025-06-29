@@ -10,8 +10,15 @@ export default {
         creme: "#FEF3DF",
         green: "#5dba6b",
         darkergreen: "#299439",
-        background: "#f4f1e8",
-        olivegreen: "#6a9b72",
+
+        background: "#e4d9cb",
+        //background: "#282534",
+        stone: "#71736D",
+        softTeal: "#8C9C9A	",
+        accent: "#F08C56	",
+
+        text: "#282534",
+
         header: "#b7a193",
       },
       keyframes: {

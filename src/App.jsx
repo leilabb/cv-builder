@@ -33,11 +33,8 @@ export default function App() {
   };
 
   return (
-    <div
-      className={`w-full min-h-screen ${
-        isDarkMode ? "bg-black" : "bg-background"
-      }`}
-    >
+    <div className={`w-full ${isDarkMode ? "bg-black" : "bg-background"}`}>
+      {/* Controls */}
       <Header isDarkMode={isDarkMode} />
       <Audio
         playerRef={playerRef}
@@ -46,11 +43,15 @@ export default function App() {
         handleSound={handleSound}
       />
       <DarkMode handleClick={handleClick} isDarkMode={isDarkMode} />
+
+      {/* Remove */}
       <Routes>
         <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
         <Route path="/cv" element={<CV />} />
         <Route path="/cvbuilder" element={<CvBuilder />} />
       </Routes>
+
+      {/* Sections */}
       <Skills isDarkMode={isDarkMode} />
       <Projects isDarkMode={isDarkMode} />
       <Jobs isDarkMode={isDarkMode} />

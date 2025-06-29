@@ -1,14 +1,27 @@
 import React from "react";
-export default function Contact() {
+export default function Contact({ isDarkMode }) {
   return (
-    <div className="flex items-center px-16 pb-10 justify-center bg-background">
+    <div
+      className={`flex items-center px-16 pb-10 justify-center ${
+        isDarkMode ? "bg-black" : "bg-background"
+      } `}
+    >
       {" "}
-      <div className="flex flex-col w-1/2 px-4 ">
+      <div className="flex flex-col md:w-1/2 px-4 ">
         {" "}
-        <div className="text-4xl mb-10 font-[UbuntuMono] flex items-center justify-center ">
+        <div
+          id="contact-me"
+          className={`text-4xl mt-32 font-[UbuntuMono] flex items-center justify-center ${
+            isDarkMode ? "text-white" : ""
+          }`}
+        >
           Intrigued? Want to know more?
         </div>
-        <div className="text-xl font-[UbuntuMono] ">
+        <div
+          className={`md:mt-20 mt-10 text-xl font-[UbuntuMono] ${
+            isDarkMode ? "text-white" : ""
+          }`}
+        >
           <a
             className="text-xl font-[UbuntuMono]  text-cyan-500"
             href="mailto:leila.benhalima2@gmail.com"

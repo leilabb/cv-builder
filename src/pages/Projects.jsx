@@ -1,37 +1,68 @@
-import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import resumeBuilder from "./../assets/resumeBuilder.png";
 import signup from "./../assets/signup.png";
+import wp from "./../assets/devtools/wp.png";
+import git from "./../assets/devtools/git.svg";
+import js from "./../assets/devtools/js.png";
+import mongo from "./../assets/devtools/mongodb.png";
+import react from "./../assets/devtools/react.png";
+import svelte from "./../assets/devtools/svelte.png";
+import tailwind from "./../assets/devtools/tailwind.png";
+import typescript from "./../assets/devtools/typescript.png";
+import node from "./../assets/devtools/node.png";
+import swift from "./../assets/devtools/swift.png";
+import angular from "./../assets/devtools/angular.png";
 
 export default function Projects({ isDarkMode }) {
+  const Tech = {
+    GIT: git,
+    JS: js,
+    MONGO: mongo,
+    REACT: react,
+    SVELTE: svelte,
+    TAILWIND: tailwind,
+    TYPESCRIPT: typescript,
+    NODE: node,
+    SWIFT: swift,
+    ANGULAR: angular,
+  };
+
+  const projects = [
+    {
+      title: "Resume Builder",
+      image: resumeBuilder,
+      tech: [Tech.TAILWIND, Tech.REACT],
+      link: "https://cv-app-9f8d7.web.app/cvBuilder",
+      description:
+        "A tool I made for building my own resume. Deployed with Firebase.",
+      githubLink: "https://github.com/leilabb/cv-builder",
+    },
+    {
+      title: "Sign Up Page",
+      image: signup,
+      tech: [Tech.NODE, Tech.MONGO],
+      link: "https://signup-hmtk.onrender.com/login",
+      description:
+        "A simple sign up page where you can create username and password, log in, log out and delete your user. Deployed using Render.",
+      githubLink: "https://github.com/leilabb/signup",
+    },
+  ];
   return (
     <div
-      className={` flex items-center justify-center md:px-48 md:py-10 ${
+      className={` flex items-center justify-center  md:px-48 ${
         isDarkMode ? "bg-black" : "bg-background"
       }`}
     >
-      <div>
-        <div className="text-4xl font-[UbuntuMono] mt-20 flex justify-center items-center ">
+      <div className="flex flex-col items-center justify-center">
+        <div
+          className={`text-4xl font-[UbuntuMono] mt-32 flex text-text justify-center items-center ${
+            isDarkMode ? "text-white" : ""
+          } `}
+        >
           That i learnt from these projects
         </div>
-        <div className="max-w-xl  flex flex-col md:flex-row gap-2 ">
-          <ProjectCard
-            className=""
-            title="Resume Builder"
-            image={resumeBuilder}
-            link="https://cv-app-9f8d7.web.app/cvBuilder"
-            description="A tool I made for building my own resume.
-            React, Tailwind, deployed with Firebase."
-            githubLink="https://github.com/leilabb/cv-builder"
-          />
-          <ProjectCard
-            className=""
-            title="Sign Up Page"
-            image={signup}
-            link="https://signup-hmtk.onrender.com/login"
-            description="A simple sign up page where you can create username and password, log in, log out and delete your user. Node.js and MongoDb. Deployed using Render."
-            githubLink="https://github.com/leilabb/signup"
-          />
+        <div className="max-w-xl items-center justify-center flex flex-col mt-20 ">
+          <ProjectCard projects={projects} />
         </div>
       </div>
     </div>

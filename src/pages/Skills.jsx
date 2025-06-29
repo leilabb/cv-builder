@@ -1,6 +1,5 @@
-import React from "react";
 import wp from "./../assets/devtools/wp.png";
-import git from "./../assets/devtools/git.png";
+import git from "./../assets/devtools/git.svg";
 import js from "./../assets/devtools/js.png";
 import mongo from "./../assets/devtools/mongodb.png";
 import react from "./../assets/devtools/react.png";
@@ -27,21 +26,26 @@ export default function Skills({ isDarkMode }) {
   ];
   return (
     <div
-      className={` flex items-center justify-center md:px-48 ${
+      className={` flex mt-32 items-center justify-center md:px-48 ${
         isDarkMode ? "bg-black" : "bg-background"
       }`}
     >
       <div>
-        <div className="text-4xl font-[UbuntuMono] flex items-center justify-center ">
+        <div
+          className={`text-4xl text-text font-[UbuntuMono] flex items-center justify-center ${
+            isDarkMode ? "text-white" : ""
+          } `}
+        >
           These are my skills
         </div>
 
-        <div className="max-w-lg mx-auto grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 mt-20">
+        <div className="max-w-lg mx-auto gap-y-2 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 mt-20">
           {skills.map((skill, i) => {
             return (
               <div key={i} className="flex justify-center">
                 <img
-                  className="w-12 h-12 p-1 hover:animate-bounce"
+                  className={`w-12 h-12 p-1 hover:animate-bounce  flex border rounded-full 
+                    ${isDarkMode ? "bg-white" : "bg-softTeal"}`}
                   title={skill.title}
                   src={skill.source}
                 />
