@@ -18,7 +18,7 @@ export default function Contact({ isDarkMode }) {
           Intrigued? Want to know more?
         </div>
         <div
-          className={`md:mt-20 mt-10 text-xl font-[UbuntuMono] ${
+          className={`mt-10 text-xl font-[UbuntuMono] ${
             isDarkMode ? "text-white" : ""
           }`}
         >

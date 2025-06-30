@@ -7,7 +7,7 @@ export default function Home({ isDarkMode }) {
     <div
       className={`${
         isDarkMode ? "text-white" : "text-text"
-      } h-full mt-[200px] md:mt-[180px] w-full flex md:p-0 px-8 flex-col items-center justify-center`}
+      } h-full mt-[200px] md:mt-0 w-full flex md:p-0 px-8 flex-col items-center justify-center`}
     >
       <div className="flex justify-start md:items-center md:justify-center">
         <img
@@ -25,7 +25,7 @@ export default function Home({ isDarkMode }) {
             Hey,&nbsp;
           </h1>
           <h1
-            className={`md:flex inline relative md:mt-[-100px] font-thin md:text-[clamp(6rem,3vw+1rem,4rem)] 
+            className={`md:flex inline relative font-thin md:text-[clamp(6rem,3vw+1rem,4rem)] 
             text-[clamp(4rem, 6vw + 1rem, 6rem))] font-[UbuntuMono]
             ${
               isDarkMode
@@ -66,7 +66,7 @@ export default function Home({ isDarkMode }) {
       <p
         className={`${
           isDarkMode ? "text-white" : "text-text"
-        } font-[Radley] justify-center items-center flex flex-row md:flex mt-20  text-2xl md:text-xl animate-pulse `}
+        } font-[Radley] justify-center items-center flex flex-row md:flex mt-10 text-2xl md:text-xl animate-pulse `}
       >
         Scroll
         <ChevronDoubleDownIcon className="w-4 h-4 mt-2 " />

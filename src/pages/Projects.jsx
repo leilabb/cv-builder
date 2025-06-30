@@ -49,7 +49,7 @@ export default function Projects({ isDarkMode }) {
   ];
   return (
     <div
-      className={` flex items-center justify-center  md:px-48 ${
+      className={` flex items-center justify-center px-8  ${
         isDarkMode ? "bg-black" : "bg-background"
       }`}
     >
@@ -61,9 +61,13 @@ export default function Projects({ isDarkMode }) {
         >
           That i learnt from these projects
         </div>
-        <div className="max-w-xl items-center justify-center flex flex-col mt-20 ">
-          <ProjectCard projects={projects} />
-        </div>
+        {projects != null && (
+          <div className="max-w-xl items-center md:items-stretch justify-center md:gap-x-6 flex md:flex-row flex-col mt-20 ">
+            {projects.map((project) => {
+              return <ProjectCard project={project} />;
+            })}
+          </div>
+        )}
       </div>
     </div>
   );

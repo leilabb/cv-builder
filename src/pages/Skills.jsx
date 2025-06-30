@@ -12,17 +12,17 @@ import angular from "./../assets/devtools/angular.png";
 
 export default function Skills({ isDarkMode }) {
   let skills = [
-    { title: "Wordpress", source: wp },
-    { title: "Git", source: git },
-    { title: "JavaScript", source: js },
-    { title: "Mongo", source: mongo },
-    { title: "React", source: react },
-    { title: "SvelteKit", source: svelte },
-    { title: "Tailwind", source: tailwind },
-    { title: "Typescript", source: typescript },
-    { title: "Node", source: node },
-    { title: "Swift", source: swift },
-    { title: "Angular", source: angular },
+    { title: "Wordpress", source: wp, name: "Wordpress" },
+    { title: "Git", source: git, name: "Git" },
+    { title: "JavaScript", source: js, name: "JavaScript" },
+    { title: "Mongo", source: mongo, name: "MongoDb" },
+    { title: "React", source: react, name: "React" },
+    { title: "SvelteKit", source: svelte, name: "SvelteKit" },
+    { title: "Tailwind", source: tailwind, name: "Tailwind" },
+    { title: "Typescript", source: typescript, name: "Typescript" },
+    { title: "Node", source: node, name: "Node.js" },
+    { title: "Swift", source: swift, name: "Swift" },
+    { title: "Angular", source: angular, name: "Angular" },
   ];
   return (
     <div
@@ -39,16 +39,22 @@ export default function Skills({ isDarkMode }) {
           These are my skills
         </div>
 
-        <div className="max-w-lg mx-auto gap-y-2 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 mt-20">
+        <div className="max-w-lg mx-auto justify-items-center gap-y-2 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 mt-20">
           {skills.map((skill, i) => {
             return (
-              <div key={i} className="flex justify-center">
+              <div
+                key={i}
+                className="flex flex-col justify-center items-center"
+              >
                 <img
-                  className={`w-12 h-12 p-1 hover:animate-bounce  flex border rounded-full 
+                  className={`w-12 h-12 p-1 hover:animate-bounce border rounded-full 
                     ${isDarkMode ? "bg-white" : "bg-softTeal"}`}
                   title={skill.title}
                   src={skill.source}
                 />
+                <p className="text-center mt-1 text-xs font-[UbuntuMono]">
+                  {skill.name}
+                </p>
               </div>
             );
           })}
