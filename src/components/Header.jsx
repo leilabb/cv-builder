@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import instagram from "./../assets/instagram.png";
 import github from "./../assets/github.svg";
 import linkedin from "./../assets/linkedin-icon.png";
+import fullResume from "./../assets/full-resume.pdf";
 
 export default function Header({ isDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +34,7 @@ export default function Header({ isDarkMode }) {
               className={`font-[UbuntuMono] relative after:block after:h-0.5 after:bg-accent after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform ${
                 isDarkMode ? "text-white" : "text-black"
               }`}
-              href="./../assets/full-resume.pdf"
+              href={fullResume}
               target="_blank"
             >
               Full Resume
