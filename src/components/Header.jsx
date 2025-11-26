@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import instagram from "./../assets/instagram.png";
 import github from "./../assets/github.svg";
 import linkedin from "./../assets/linkedin-icon.png";
-import fullResume from "./../assets/full-resume.pdf";
+import fullResume from "./../assets/fullresume.pdf";
 
 export default function Header({ isDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
