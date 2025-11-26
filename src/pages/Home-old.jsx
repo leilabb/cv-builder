@@ -1,3 +1,5 @@
+import fullResume from "./../assets/fullresume.pdf";
+
 export default function Home() {
   return (
     <div>
@@ -18,8 +20,8 @@ export default function Home() {
       </div>
       <div>
         <a
-          href="../assets/full-resume.pdf"
-          className=" flex md:block justify-center items-center"
+          href={fullResume}
+          className="flex md:block justify-center items-center"
         >
           <button className="md:block p-12 items-center font-semibold justify-center text-xl h-44 w-44 rounded-full border-4 border-gray-900 flex hover:bg-yellow-300">
             <p className="flex ">Full Resume</p>
